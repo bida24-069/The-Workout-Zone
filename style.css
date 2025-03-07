@@ -88,3 +88,31 @@ bottom: 0;
 width: 100%;
 
 }
+p {
+
+font-size: 1.1em;
+
+}
+
+
+a {
+
+color: #4CAF50;
+img {
+
+border: 5px solid #4CAF50;
+
+border-radius: 10px;
+
+}
+
+text-decoration: none;
+
+}
+
+
+a:hover {
+
+text-decoration: underline;
+
+}
