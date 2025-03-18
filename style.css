@@ -8,7 +8,7 @@ property: value;
 body {
 font-family: Arial, sans-serif;
 
-color: white;
+color: grey;
 
 background-color: grey;
 
@@ -79,7 +79,7 @@ margin: 20px 0;
 }
 footer {
 
-background-color: white;
+background-color: grey;
 
 color: white;
 
