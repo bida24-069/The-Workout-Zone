@@ -6,10 +6,10 @@
 body {
   font-family: Arial, sans-serif;
   color: #333; /* Darker text for better contrast */
-  background-image: url('background.jpg'); 
+  background-image: url('Gym%20Poster.jpg'); 
   background-size: cover; 
-  background-repeat: no-repeat; /* Prevent image repetition */
-  background-attachment: fixed; /* Keep background fixed during scrolling */
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
   margin: 0;
   padding: 0;
   line-height: 1.6;
