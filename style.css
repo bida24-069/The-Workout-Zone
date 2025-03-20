@@ -6,8 +6,8 @@
 body {
   font-family: Arial, sans-serif;
   color: #333; /* Darker text for better contrast */
-  background-image: url('background.jpg'); /* Replace with your image path */
-  background-size: cover; /* Cover the entire viewport */
+  background-image: url('background.jpg'); 
+  background-size: cover; 
   background-repeat: no-repeat; /* Prevent image repetition */
   background-attachment: fixed; /* Keep background fixed during scrolling */
   margin: 0;
