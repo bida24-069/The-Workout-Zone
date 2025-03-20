@@ -4,106 +4,106 @@
 <title>My Styled Page</title>
 <style>
 body {
-  font-family: Arial, sans-serif;
-  color: #333; /* Darker text for better contrast */
-  background-image: url('Gym%20Poster.jpg'); 
-  background-size: cover; 
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-image: url('Gym%20Poster.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
 header {
-  background-color: white
-  color: black;
-  padding: 20px;
-  text-align: center;
+    background-color: white; /* Corrected background-color */
+    color: black;
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
-  margin: 0;
+    margin: 0;
 }
 
 nav {
-  text-align: center;
-  padding: 10px 0;
+    text-align: center;
+    padding: 10px 0;
 }
 
 nav a {
-  color: black;
-  text-decoration: none;
-  margin: 0 10px;
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
 nav a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 main {
-  padding: 20px;
-  max-width: 800px;
-  margin: 20px auto; /* Add some top/bottom margin */
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for content */
-  border-radius: 8px; /* Rounded corners for the main content area */
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
 }
 
 main img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px 0;
-  border: 5px solid #4CAF50;
-  border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border: 5px solid #4CAF50;
+    border-radius: 10px;
 }
 
 footer {
-  background-color: white
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+    background-color: white; /* Corrected background-color */
+    color: black; /* corrected footer text color */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 p {
-  font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 a {
-  color: #4CAF50;
-  text-decoration: none;
+    color: #4CAF50;
+    text-decoration: none;
 }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Welcome to My Website</h1>
-  <p>A place for information and images.</p>
+    <h1>Welcome to My Website</h1>
+    <p>A place for information and images.</p>
 </header>
 
 <nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
-  <a href="#">Shop</a>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Shop</a>
 </nav>
 
 <main>
-  <h2>About This Page</h2>
-  <p>This is a sample page with a background image and styled elements. The background image is set to cover the entire viewport and remains fixed during scrolling. The main content area has a semi-transparent white background for better readability.</p>
+    <h2>About This Page</h2>
+    <p>This is a sample page with a background image and styled elements. The background image is set to cover the entire viewport and remains fixed during scrolling. The main content area has a semi-transparent white background for better readability.</p>
 
-  <img src="example-image.jpg" alt="Example Image">
+    <img src="example-image.jpg" alt="Example Image">
 
-  <p>Here is a link: <a href="https://www.example.com">Example Link</a></p>
+    <p>Here is a link: <a href="https://www.example.com">Example Link</a></p>
 
 </main>
 
 <footer>
-  <p>&copy; 2024 My Website</p>
+    <p>&copy; 2024 My Website</p>
 </footer>
 
 </body>
