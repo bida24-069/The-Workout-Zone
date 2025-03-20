@@ -16,7 +16,7 @@ body {
 }
 
 header {
-  background-color: rgba(173, 216, 230, 0.8); /* Semi-transparent light blue */
+  background-color: black
   color: black;
   padding: 20px;
   text-align: center;
@@ -59,7 +59,7 @@ main img {
 }
 
 footer {
-  background-color: rgba(128, 128, 128, 0.8); /* Semi-transparent grey */
+  background-color: black
   color: white;
   text-align: center;
   padding: 10px;
@@ -89,6 +89,7 @@ a {
   <a href="#">Home</a>
   <a href="#">About</a>
   <a href="#">Contact</a>
+  <a href="#">Shop</a>
 </nav>
 
 <main>
