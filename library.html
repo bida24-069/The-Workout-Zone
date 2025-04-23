@@ -6,7 +6,7 @@
   <title>Library</title>
   <style>
   body {
-   https://github.com/bida24-069/The-Workout-Zone/blob/main/Gym%20image.jpg
+  background-image: url('Gym%20image.jpg'); /* Assuming image is in the same folder */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -15,7 +15,8 @@
   flex-direction: column;
   min-height: 100vh;
   box-sizing: border-box;
-  background-color: #f4f4f4; /* Default background color if no image */
+  background-size: cover;
+  background-position: center;
   }
   header {
   background-color: rgba(0, 0, 0, 0.5);
@@ -48,8 +49,9 @@
   main > p {
   text-align: center;
   font-size: 1.1em;
-  color: #333; /* Adjusted text color for light background */
+  color: #eee;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #000;
   }
   .gallery-container {
   display: flex;
@@ -58,18 +60,19 @@
   gap: 15px; /* Reduced gap */
   }
   .gallery-item {
-  background-color: #fff; /* Adjusted item background */
-  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: calc(20% - 15px); /* Adjust for more items per row */
   margin-bottom: 15px; /* Reduced margin */
   transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
   }
   .gallery-item:hover {
   transform: scale(1.05); /* Slightly less scaling */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
   .gallery-item img {
   width: 100%;
@@ -81,8 +84,9 @@
   .desc {
   padding: 10px; /* Reduced padding */
   text-align: center;
-  color: #555; /* Adjusted text color */
+  color: #eee;
   font-size: 0.9em; /* Slightly smaller font */
+  text-shadow: 1px 1px 2px #000;
   }
   footer {
   background-color: rgba(0, 0, 0, 0.5);
@@ -90,6 +94,7 @@
   text-align: center;
   padding: 15px 0;
   font-size: 0.9em;
+  text-shadow: 1px 1px 2px #000;
   }
   /* Responsive layout for smaller screens */
   @media (max-width: 768px) {
