@@ -8,90 +8,118 @@
   <style>
   body {
   background-image: url('Cool%20Background.jpg');
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: #f0f8ff; /* Light, elegant text color */
+  }
+  header {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  h1 {
+  color: #fff;
+  font-size: 3em;
+  margin: 0;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 4px #000000;
+  }
+  nav {
+  text-align: center;
+  margin-top: 25px;
+  }
+  nav a {
+  color: #e0f2f7;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+  letter-spacing: 1px;
+  }
+  nav a:hover {
+  background-color: #26a69a; /* Teal hover color */
+  color: #fff;
+  }
+  main {
+  flex-grow: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
   .container {
-  color: white;
-  font-family: 'Arial', sans-serif;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
   animation: fadeIn 1s ease-out forwards;
+  max-width: 800px;
+  width: 100%;
   }
   @keyframes fadeIn {
   from {
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translateY(20px);
   }
   to {
   opacity: 1;
   transform: translateY(0);
   }
   }
-  h1 {
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 4px #000000;
-  }
-  nav {
-  text-align: center;
-  margin-top: 10px;
-  }
-  nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease;
-  }
-  nav a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  }
   p {
-  line-height: 1.6;
+  line-height: 1.8;
+  margin-bottom: 25px;
   text-shadow: 1px 1px 2px #000000;
+  font-size: 1.1em;
+  color: #f5f5f5;
   }
   footer {
   text-align: center;
-  margin-top: 20px;
-  color: white;
+  padding: 30px 0;
+  color: #e0f2f7;
   text-shadow: 1px 1px 2px #000000;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  }
+  footer p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
   }
   </style>
  </head>
  <body>
   <header>
-  <h1 style="color: white; text-shadow: 2px 2px 4px #000000;">About Us</h1>
+  <h1>About Us</h1>
   <nav>
-  <a href="index.html">Home</a> |
-  <a href="about.html">About</a> |
-  <a href="contact.html">Contact</a> |
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
   <a href="library.html">Library</a>
   </nav>
   </header>
   <main>
   <div class="container">
-  <p>The Workout Zone is a unique blend of class, expertise and simplicity of all your exercise equipment and tutorials of both home and gym workouts. We offer various gym equipment and workout videos all under one setting and you can also browse through our display of different gym equipment and find the one which suits you!!!</p>
-  <p>We offer free insight and recommendations for your daily workout routines as well as the necessary equipment for your preferred exercises/workouts and you can also check out our library for more details!! </p>
-
-<p>Step into The Workout Zone, your ultimate fitness destination! We offer a comprehensive suite of services designed to help you achieve your health and wellness goals.
- Explore our state-of-the-art gym equipped with a wide array of cardio machines, strength training equipment, and free weights to cater to every fitness level. Our certified personal trainers are on hand to provide expert guidance, personalized workout plans, and motivation to keep you on track. Dive into our diverse group fitness classes, ranging from high-energy Zumba and spin to calming yoga and Pilates, all led by experienced instructors. For those seeking specialized training, we offer programs tailored to specific needs, including athletic performance enhancement and injury rehabilitation. After an invigorating workout, unwind in our comfortable locker rooms with shower facilities, and consider refueling at our on-site nutrition bar offering healthy snacks and beverages.
- At The Workout Zone, we're more than just a gym – we're a supportive community dedicated to helping you become your best self.
-
-
-
- 
-</p>
-
-
-   
+  <p>Welcome to The Workout Zone, your premier online destination for all things fitness. We're passionate about empowering individuals to achieve their health and wellness goals through access to high-quality exercise equipment and comprehensive workout guidance. Our platform uniquely blends a curated selection of gym equipment with expert tutorials for both home and gym-based routines, all conveniently in one place.</p>
+  <p>Explore our extensive catalog of gym equipment, meticulously chosen to cater to diverse fitness levels and training preferences. Whether you're a beginner setting up your home gym or a seasoned athlete looking to enhance your training facility, you'll find the perfect tools to support your fitness journey. Browse our detailed displays and discover equipment that aligns with your specific needs and aspirations.</p>
+  <p>At The Workout Zone, we believe that knowledge is key to success. That's why we offer complimentary insights and personalized recommendations to optimize your daily workout routines. Our expert resources and guidance will help you make informed decisions about the equipment that best suits your preferred exercises and fitness objectives. Don't forget to explore our comprehensive library for in-depth information and inspiration to elevate your fitness experience.</p>
+  <p>Step into The Workout Zone and join a supportive community dedicated to helping you unlock your full potential. We're more than just a retailer; we're your partner in achieving a healthier, stronger you.</p>
   </div>
   </main>
   <footer>
   <p>&copy; 2025 @The Workout Zone</p>
+  <p>Your Ultimate Fitness Destination</p>
   </footer>
  </body>
  </html>
