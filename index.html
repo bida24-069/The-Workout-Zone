@@ -3,205 +3,123 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Workout Zone</title>
+  <title>About Us</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
   body {
-  background-image: url('Background%20Image.jpg');
+  background-image: url('Cool%20Background.jpg');
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  color: #f0f8ff; /* Light, elegant text color */
   }
-  .navbar {
-  background: rgba(0, 0, 0, 0.8) !important; /* Darker, translucent background */
-  padding: 15px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-  }
-  .navbar-brand {
-  font-size: 2.2em; /* Slightly larger brand */
-  font-weight: bold;
-  color: #ffc107 !important; /* Accent color for brand */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  .navbar-toggler {
-  border: none !important;
-  }
-  .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  }
-  .navbar-nav .nav-link {
-  font-size: 1.15em;
-  margin-left: 20px;
-  color: #eee !important;
-  transition: color 0.3s ease;
-  position: relative; /* For the underline effect */
-  padding: 8px 0; /* Adjust padding */
-  }
-  .navbar-nav .nav-link:hover {
-  color: #ffc107 !important;
-  }
-  /* Underline effect on hover */
-  .navbar-nav .nav-link::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #ffc107;
-  transition: width 0.3s ease-in-out;
-  }
-  .navbar-nav .nav-link:hover::before {
-  width: 100%;
-  }
-  .jumbotron {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 50px; /* Increased padding */
-  border-radius: 15px;
-  margin-top: 60px; /* Increased margin */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-  }
-  .jumbotron h1 {
-  font-size: 4em; /* Larger heading */
-  font-weight: bold;
-  margin-bottom: 25px;
-  text-shadow: 2px 2px 4px #000;
-  letter-spacing: 1.2px;
-  }
-  .jumbotron p {
-  font-size: 1.6em;
-  line-height: 1.7;
-  text-shadow: 1px 1px 2px #000;
-  margin-bottom: 40px;
-  }
-  .btn-primary {
-  background-color: #ffc107;
-  color: #000;
-  font-size: 1.3em;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease-in-out; /* Added transform */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  .btn-primary:hover {
-  background-color: #e0a800;
-  transform: translateY(-2px); /* Slight lift on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  }
-  .interactive-elements {
-  margin-top: 60px;
-  }
-  .feature-card {
-  background: rgba(0, 0, 0, 0.7); /* Slightly darker */
-  border-radius: 12px;
-  padding: 40px; /* Increased padding */
-  margin-bottom: 30px;
+  header {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px 0;
   text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
-  .feature-card:hover {
-  transform: translateY(-8px); /* Adjusted lift */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  }
-  .feature-card h3 {
+  h1 {
   color: #fff;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 2px #000;
-  font-size: 1.8em;
-  letter-spacing: 1px;
+  font-size: 3em;
+  margin: 0;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 4px #000000;
   }
-  .feature-card p {
-  color: #eee;
-  font-size: 1.15em;
-  line-height: 1.7;
-  text-shadow: 1px 1px 2px #000;
+  nav {
+  text-align: center;
+  margin-top: 25px;
   }
-  .feature-card .btn-outline-light {
-  border: 2px solid #f8f9fa;
-  color: #f8f9fa;
-  font-size: 1em;
+  nav a {
+  color: #e0f2f7;
+  text-decoration: none;
+  margin: 0 15px;
   padding: 10px 20px;
   border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+  letter-spacing: 1px;
   }
-  .feature-card .btn-outline-light:hover {
-  background-color: #f8f9fa;
-  color: #000;
+  nav a:hover {
+  background-color: #26a69a; /* Teal hover color */
+  color: #fff;
+  }
+  main {
+  flex-grow: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  animation: fadeIn 1s ease-out forwards;
+  max-width: 800px;
+  width: 100%;
+  }
+  @keyframes fadeIn {
+  from {
+  opacity: 0;
+  transform: translateY(20px);
+  }
+  to {
+  opacity: 1;
+  transform: translateY(0);
+  }
+  }
+  p {
+  line-height: 1.8;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px #000000;
+  font-size: 1.1em;
+  color: #f5f5f5;
   }
   footer {
-  padding: 40px 0;
   text-align: center;
-  color: #eee;
-  text-shadow: 1px 1px 2px #000;
-  background-color: rgba(0, 0, 0, 0.8);
-  margin-top: 80px;
+  padding: 30px 0;
+  color: #e0f2f7;
+  text-shadow: 1px 1px 2px #000000;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+  }
+  footer p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
   }
   </style>
  </head>
  <body>
   <header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top"> <div class="container">
-  <a class="navbar-brand" href="index.html">The Workout Zone</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-end" id="navbarNav"> <ul class="navbar-nav">
-  <li class="nav-item">
-  <a class="nav-link" href="index.html">Home</a>
-  </li>
-  <li class="nav-item">
-  <a class="nav-link" href="about.html">About</a>
-  </li>
-  <li class="nav-item">
-  <a class="nav-link" href="contact.html">Contact</a>
-  </li>
-  <li class="nav-item">
-  <a class="nav-link" href="library.html">Library</a>
-  </li>
-  </ul>
-  </div>
-  </div>
+  <h1>About Us</h1>
+  <nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="library.html">Library</a>
   </nav>
   </header>
   <main>
-  <div class="container mt-5 pt-5"> <div class="jumbotron text-center">
-  <h1 class="display-4">Unlock Your Fitness Potential</h1>
-  <p class="lead">Welcome to The Workout Zone, your ultimate destination for top-quality gym equipment and expert health advice!!!</p>
-  </div>
-  <div class="row interactive-elements">
-  <div class="col-md-4">
-  <div class="feature-card">
-  <h3>Browse Equipment</h3>
-  <p>Discover a wide range of gym equipment, from cardio machines to strength training gear. Find the perfect tools for your fitness journey.</p>
-  <a href="library.html" class="btn btn-sm btn-outline-light">View Collection</a>
-  </div>
-  </div>
-  <div class="col-md-4">
-  <div class="feature-card">
-  <h3>Learn About Us</h3>
-  <p>Get to know The Workout Zone, our mission, and our commitment to helping you achieve your health and fitness goals.</p>
-  <a href="about.html" class="btn btn-sm btn-outline-light">Our Story</a>
-  </div>
-  </div>
-  <div class="col-md-4">
-  <div class="feature-card">
-  <h3>Contact Our Team</h3>
-  <p>Have questions or need assistance? Reach out to our friendly team for support and guidance.</p>
-  <a href="contact.html" class="btn btn-sm btn-outline-light">Get In Touch</a>
-  </div>
-  </div>
-  </div>
+  <div class="container">
+  <p>Welcome to The Workout Zone, your premier online destination for all things fitness. We're passionate about empowering individuals to achieve their health and wellness goals through access to high-quality exercise equipment and comprehensive workout guidance. Our platform uniquely blends a curated selection of gym equipment with expert tutorials for both home and gym-based routines, all conveniently in one place.</p>
+  <p>Explore our extensive catalog of gym equipment, meticulously chosen to cater to diverse fitness levels and training preferences. Whether you're a beginner setting up your home gym or a seasoned athlete looking to enhance your training facility, you'll find the perfect tools to support your fitness journey. Browse our detailed displays and discover equipment that aligns with your specific needs and aspirations.</p>
+  <p>At The Workout Zone, we believe that knowledge is key to success. That's why we offer complimentary insights and personalized recommendations to optimize your daily workout routines. Our expert resources and guidance will help you make informed decisions about the equipment that best suits your preferred exercises and fitness objectives. Don't forget to explore our comprehensive library for in-depth information and inspiration to elevate your fitness experience.</p>
+  <p>Step into The Workout Zone and join a supportive community dedicated to helping you unlock your full potential. We're more than just a retailer; we're your partner in achieving a healthier, stronger you.</p>
   </div>
   </main>
   <footer>
+  <p>&copy; 2025 @The Workout Zone</p>
+  <p>Your Ultimate Fitness Destination</p>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
  </body>
  </html>
