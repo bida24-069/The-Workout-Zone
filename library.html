@@ -53,8 +53,8 @@
   .gallery-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
+  justify-content: flex-start; /* Align items to the start of the row */
+  gap: 15px; /* Reduced gap */
   }
   .gallery-item {
   background-color: #fff;
@@ -62,23 +62,26 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: calc(33.33% - 20px); /* Adjust width for desired number of columns */
-  margin-bottom: 20px;
+  width: calc(20% - 15px); /* Adjust for more items per row */
+  margin-bottom: 15px; /* Reduced margin */
   transition: transform 0.3s ease-in-out;
   }
   .gallery-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.03); /* Slightly less scaling */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   .gallery-item img {
   width: 100%;
   height: auto;
   display: block;
+  max-height: 150px; /* Reduced max height */
+  object-fit: cover; /* Maintain aspect ratio */
   }
   .desc {
-  padding: 15px;
+  padding: 10px; /* Reduced padding */
   text-align: center;
   color: #555;
+  font-size: 0.9em; /* Slightly smaller font */
   }
   footer {
   background-color: #333;
@@ -90,12 +93,12 @@
   /* Responsive layout for smaller screens */
   @media (max-width: 768px) {
   .gallery-item {
-  width: calc(50% - 20px);
+  width: calc(33.33% - 15px);
   }
   }
   @media (max-width: 480px) {
   .gallery-item {
-  width: 100%;
+  width: calc(50% - 15px);
   }
   }
   </style>
@@ -117,49 +120,50 @@
   <a target="_blank" href="Artofit.jfif">
   <img src="Artofit.jfif" alt="Ab Roller">
   </a>
-  <div class="desc">Ab Roller For Only; P200.00</div>
+  <div class="desc">Ab Roller; P200.00</div>
   </div>
   <div class="gallery-item">
   <a target="_blank" href="Balance%20Balls.jfif">
   <img src="Balance%20Balls.jfif" alt="Balance Balls">
   </a>
-  <div class="desc">Balance Balls For Only; P200.00 [each]</div>
+  <div class="desc">Balance Balls; P200.00 [each]</div>
   </div>
   <div class="gallery-item">
   <a target="_blank" href="Dumbells.jpg">
   <img src="Dumbells.jpg" alt="Dumbells">
   </a>
-  <div class="desc">Dumbell Rack For Only; P800.00</div>
+  <div class="desc">Dumbell Rack; P800.00</div>
   </div>
   <div class="gallery-item">
   <a target="_blank" href="Folded%20Yoga%20Mats.jfif">
   <img src="Folded%20Yoga%20Mats.jfif" alt="Yoga Mats">
   </a>
-  <div class="desc">Folded Yoga Mats For Only; P300.00 [each]</div>
+  <div class="desc">Folded Yoga Mats; P300.00 [each]</div>
   </div>
   <div class="gallery-item">
   <a target="_blank" href="Elliptical%20Cross%20Trainer.jpg">
   <img src="Elliptical%20Cross%20Trainer.jpg" alt="Cross trainer">
   </a>
-  <div class="desc">Elliptical Cross Trainer For Only P1500.00 [each]</div>
+  <div class="desc">Elliptical Cross Trainer; P1500.00</div>
   </div>
   <div class="gallery-item">
   <a target="_blank" href="Elliptical%20Bike.jpg">
   <img src="Elliptical%20Bike.jpg" alt="Bike">
   </a>
-  <div class="desc">Elliptical Bike For Only P1800.00 [each]</div>
+  <div class="desc">Elliptical Bike; P1800.00</div>
   </div>
   <div class="gallery-item">
   <a target="_blank" href="Treadmill.jfif">
   <img src="Treadmill.jfif" alt="Treadmill">
   </a>
-  <div class="desc">Treadmill For Only P1200.00 [each]</div>
+  <div class="desc">Treadmill; P1200.00</div>
   </div>
-   <div class="gallery-item">
+  <div class="gallery-item">
   <a target="_blank" href="Pulley.png">
   <img src="Pulley.png" alt="Pulley">
   </a>
-  <div class="desc">Pulley For Only P1200.00 [each]</div>
+  <div class="desc">Pulley; P1200.00</div>
+  </div>
   </div>
   </main>
   <footer>
