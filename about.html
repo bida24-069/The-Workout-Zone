@@ -1,57 +1,85 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About Us</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<style>
-</style>
-<body>
-<header>
-
-<h1>About Us</h1>
-
-<nav>
-
-<a href="index.html">Home</a> |
-
-<a href="about.html">About</a> |
-
-<a href="contact.html">Contact</a> |
-
-<a href="library.html">Library</a>
-
-</nav>
-
-</header>
-
-<main>
-<div container
-<p>The Workout Zone is a unique blend of class, expertise and simplicity of all your exercise equipment and tutorials of both home and gym workouts. We offer various gym equipment and workout videos all under one setting and you can also browse through our display of different gym equipment and find the one which suits you!!!
-<p>We offer free insight and recommendations for your daily workout routines as well as the necessary equipment for your preferred exercises/workouts and you can also check out our library for more details!! </p>
-</div>
- <p style="color:DodgerBlue;">Lorem ipsum...</p>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-body {
+  body {
   background-image: url('Cool%20Background.jpg');
-}
-</style>
-  <section class="layout">
-</section>
-</main>
-<footer>
-  
-<p>&copy; 2025 @The Workout Zone</p>
-
-</footer>
-
-</body>
-
-</html>
+  }
+  .container {
+  color: white;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-out forwards;
+  }
+  @keyframes fadeIn {
+  from {
+  opacity: 0;
+  transform: translateY(-20px);
+  }
+  to {
+  opacity: 1;
+  transform: translateY(0);
+  }
+  }
+  h1 {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  }
+  nav {
+  text-align: center;
+  margin-top: 10px;
+  }
+  nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+  }
+  nav a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  }
+  p {
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px #000000;
+  }
+  footer {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  text-shadow: 1px 1px 2px #000000;
+  }
+  </style>
+ </head>
+ <body>
+  <header>
+  <h1 style="color: white; text-shadow: 2px 2px 4px #000000;">About Us</h1>
+  <nav>
+  <a href="index.html">Home</a> |
+  <a href="about.html">About</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="library.html">Library</a>
+  </nav>
+  </header>
+  <main>
+  <div class="container">
+  <p>The Workout Zone is a unique blend of class, expertise and simplicity of all your exercise equipment and tutorials of both home and gym workouts. We offer various gym equipment and workout videos all under one setting and you can also browse through our display of different gym equipment and find the one which suits you!!!</p>
+  <p>We offer free insight and recommendations for your daily workout routines as well as the necessary equipment for your preferred exercises/workouts and you can also check out our library for more details!! </p>
+  </div>
+  </main>
+  <footer>
+  <p>&copy; 2025 @The Workout Zone</p>
+  </footer>
+ </body>
+ </html>
