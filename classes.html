@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classes</title>
+  <style>
+  body {
+   background-image: url('b435084a4160aabf658bf5be10286cad.jpg');/* Assuming image is in the same folder */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  }
+  header {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  }
+  h1 {
+  margin: 0;
+  font-size: 2.5em;
+  }
+  nav {
+  text-align: center;
+  margin-top: 10px;
+  }
+  nav a {
+  color: #eee;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  }
+  nav a:hover {
+  color: #ffc107;
+  }
+  main {
+  flex-grow: 1;
+  padding: 30px;
+  }
+  main > p {
+  text-align: center;
+  font-size: 1.1em;
+  color: #eee;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #000;
+  }
+  .gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align items to the start of the row */
+  gap: 15px; /* Reduced gap */
+  }
+  .gallery-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: calc(20% - 15px); /* Adjust for more items per row */
+  margin-bottom: 15px; /* Reduced margin */
+  transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+  }
+  .gallery-item:hover {
+  transform: scale(1.05); /* Slightly less scaling */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  .gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 150px; /* Reduced max height */
+  object-fit: cover; /* Maintain aspect ratio */
+  }
+  .desc {
+  padding: 10px; /* Reduced padding */
+  text-align: center;
+  color: #eee;
+  font-size: 0.9em; /* Slightly smaller font */
+  text-shadow: 1px 1px 2px #000;
+  }
+  footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #eee;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9em;
+  text-shadow: 1px 1px 2px #000;
+  }
+  /* Responsive layout for smaller screens */
+  @media (max-width: 768px) {
+  .gallery-item {
+  width: calc(33.33% - 15px);
+  }
+  }
+  @media (max-width: 480px) {
+  .gallery-item {
+  width: calc(50% - 15px);
+  }
+  }
+  </style>
+ </head>
+ <body>
+  <header>
+  <h1>Our Classes</h1>
+  <nav>
+  <a href="index.html">Home</a> |
+  <a href="about.html">About</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="classes.html">Classes</a>
+  </nav>
+  </header>
+  <main>
+  <p>Here are our different classes depending on your favourite workout areas, so choose which one suits you best!!</p>
+  <div>
+  </div>
+  </main>
+  <footer>
+  <p>&copy; 2025 The Workout Zone</p>
+  </footer>
+ </body>
+ </html>
