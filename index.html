@@ -19,8 +19,9 @@
             overflow-x: hidden;
         }
 
+        /* Updated background image URL */
         body {
-            background-image: url('/api/placeholder/1920/1080');
+            background-image: url('https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -167,7 +168,7 @@
             transform: scale(1.05);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
         }
-        
+
         .signup-button {
             display: inline-block;
             padding: 15px 35px;
@@ -213,15 +214,15 @@
                 font-size: 0.9em;
                 display: inline-block;
             }
-            
+
             h1 {
                 font-size: 2.5em;
             }
-            
+
             main {
                 padding: 20px;
             }
-            
+
             .container {
                 padding: 30px;
             }
@@ -244,15 +245,15 @@
     <main class="my-5">
         <div class="container">
             <h2>Welcome to Your Fitness Journey</h2>
-            <p>Unlock your full potential with The Workout Zone. Explore premium equipment, expert guidance, and a supportive community dedicated to your success.</p>
+            <p id="main-text">Unlock your full potential with The Workout Zone. Explore premium equipment, expert guidance, and a supportive community dedicated to your success.</p>
             <div class="buttons-container">
-                <a href="#" class="cta-button">Discover Equipment</a>
-                <a href="#" class="signup-button">Sign Up Now</a>
+                <a href="#" class="cta-button" id="discover-equipment">Discover Equipment</a>
+                <a href="#" class="signup-button" id="sign-up">Sign Up Now</a>
             </div>
         </div>
     </main>
     <footer>
-        <p>&copy; 2025 The Workout Zone</p>
+        <p>&copy; <span id="year">2025</span> The Workout Zone</p>
         <p>Elevate Your Fitness.</p>
     </footer>
 
@@ -261,13 +262,34 @@
         document.addEventListener('DOMContentLoaded', function() {
             const currentLocation = window.location.href;
             const navLinks = document.querySelectorAll('nav a');
-            
+
             navLinks.forEach(link => {
                 if(link.href === currentLocation) {
                     link.classList.add('active');
                 }
             });
+
+            // Get the current year for the footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Change main text on button click
+            const discoverEquipmentButton = document.getElementById('discover-equipment');
+            const signUpButton = document.getElementById('sign-up');
+            const mainText = document.getElementById('main-text');
+
+            discoverEquipmentButton.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default action of the link
+                mainText.textContent = "Explore our wide range of high-quality fitness equipment designed to help you reach your goals.";
+            });
+
+            signUpButton.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default action of the link
+                mainText.textContent = "Ready to get started? Sign up now and become a part of The Workout Zone community!";
+            });
         });
     </script>
 </body>
 </html>
+
+
+
