@@ -1,14 +1,45 @@
+  <!DOCTYPE html>
 <html>
-<form>
-  <h>Feedback Form</h>
-  <form action="thank you.html">
+<head>
+  <title>Feedback Form</title>
+</head>
+<body>
 
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname">  
-  <input type="radio" name="gender" value="male" checked> Male<br> 
-  <input type="radio" name="gender" value="female"> Female<br> 
-  <input type="submit" value="Submit">
-</form>
-</html>                                                                                                                     
+  <h1>Feedback Form</h1>
+  <form action="thank_you.html" method="post">
+
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="rating">Overall Experience:</label><br>
+    <select id="rating" name="rating">
+      <option value="excellent">Excellent</option>
+      <option value="good">Good</option>
+      <option value="average">Average</option>
+      <option value="poor">Poor</option>
+      <option value="very_poor">Very Poor</option>
+    </select><br><br>
+
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="5" cols="50"></textarea><br><br>
+
+    <label for="suggestions">Suggestions (Optional):</label><br>
+    <textarea id="suggestions" name="suggestions" rows="3" cols="50"></textarea><br><br>
+
+    <label for="gender">Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label><br><br>
+
+    <input type="submit" value="Submit Feedback">
+
+  </form>
+
+</body>
+</html>                                                                                                            
