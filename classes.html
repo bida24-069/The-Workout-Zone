@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classes</title>
+    <title>Our Classes</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             background-image: url('Poster.jpg');
-            font-family: Arial, sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
             color: white;
@@ -57,7 +58,7 @@
         .gallery-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; /* Center the gallery items */
+            justify-content: center;
             gap: 15px;
         }
         .gallery-item {
@@ -66,11 +67,12 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: calc(30% - 15px); /* Adjusted width for 3 items per row on larger screens */
+            width: calc(30% - 15px);
             margin-bottom: 15px;
             transition: transform 0.3s ease-in-out;
             backdrop-filter: blur(5px);
-            min-width: 200px; /* Ensure a minimum width for each item */
+            min-width: 200px;
+            cursor: pointer; /* Add cursor pointer */
         }
         .gallery-item:hover {
             transform: scale(1.05);
@@ -90,23 +92,130 @@
             font-size: 0.9em;
             text-shadow: 1px 1px 2px #000;
         }
-        footer {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #eee;
-            text-align: center;
-            padding: 15px 0;
-            font-size: 0.9em;
-            text-shadow: 1px 1px 2px #000;
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
         }
-        /* Responsive layout for smaller screens */
+
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+          from {opacity: 0;}
+          to {opacity: 1;}
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            border: none;
+            background: transparent;
+            padding: 0;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .modal-body {
+            text-align: center;
+        }
+
+        .modal-body img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .modal-body p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .modal-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .modal-footer button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal-footer button:hover {
+            background-color: #0056b3;
+        }
+
+
         @media (max-width: 768px) {
             .gallery-item {
-                width: calc(50% - 15px); /* 2 items per row on medium screens */
+                width: calc(50% - 15px);
             }
         }
         @media (max-width: 480px) {
             .gallery-item {
-                width: 100%; /* 1 item per row on small screens */
+                width: 100%;
+            }
+             .modal-content {
+                margin: 20px auto;
+                padding: 15px;
+            }
+            .modal-header h2{
+               font-size: 1.2em;
+            }
+            .modal-body p{
+                font-size: 1em;
             }
         }
     </style>
@@ -124,34 +233,96 @@
     <main>
         <p>Here are our different classes depending on your favourite workout areas, so choose which one suits you best!!</p>
         <div class="gallery-container">
-            <div class="gallery-item">
+            <div class="gallery-item" data-name="Yoga">
                 <img src="Yoga%20Pose.jpg" alt="Yoga Class">
                 <div class="desc">Yoga</div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-name="Crossfit">
                 <img src="Crossfit.jpg" alt="Crossfit Class">
                 <div class="desc">Crossfit</div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-name="Zumba">
                 <img src="Zumba.jpg" alt="Zumba Class">
                 <div class="desc">Zumba</div>
             </div>
-             <div class="gallery-item">
+            <div class="gallery-item" data-name="Pilates">
                 <img src="Pilates%20pic.jpg" alt="Pilates Class">
                 <div class="desc">Pilates</div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-name="Boxing">
                 <img src="Boxing%20pic.jpg" alt="Boxing Class">
                 <div class="desc">Boxing</div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-name="Spin">
                 <img src="Spin%20pic.jpg" alt="Spin Class">
                 <div class="desc">Spin</div>
             </div>
         </div>
     </main>
+     <div id="classModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2></h2>
+                <button id="closeModal" class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="">
+                <p id="modalDescription"></p>
+            </div>
+            <div class="modal-footer">
+                <button id="enrollButton">Enroll Now</button>
+            </div>
+        </div>
+    </div>
     <footer>
         <p>&copy; 2025 The Workout Zone</p>
     </footer>
+
+    <script>
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const modal = document.getElementById('classModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalTitle = document.querySelector('.modal-header h2');
+        const modalDescription = document.getElementById('modalDescription');
+        const closeModalButton = document.getElementById('closeModal');
+        const enrollButton = document.getElementById('enrollButton');
+
+        const classDescriptions = {
+            'Yoga': 'Yoga is a group of physical, mental, and spiritual practices or disciplines which originated in ancient India.  It focuses on strength, flexibility and breathing to boost physical and mental well-being.',
+            'Crossfit': 'CrossFit is a strength and conditioning workout that is made up of functional movement performed at a high intensity level. These movements are actions that you perform in your day-to-day life, like squatting, pushing, pulling, etc.',
+            'Zumba': 'Zumba is a type of exercise that combines dance and fitness moves.  Zumba routines incorporate interval training — alternating fast and slow rhythms — and resistance training.',
+            'Pilates': 'Pilates is a type of exercise that focuses on building strength, flexibility and endurance.  It emphasizes proper postural alignment, core strength and muscle balance.  Pilates can be modified to provide a workout for people of varying fitness levels.',
+            'Boxing': 'Boxing is a combat sport in which two people, usually wearing protective gloves and other protective equipment, throw punches at each other for a predetermined amount of time in a boxing ring.',
+            'Spin': 'Spinning is a form of exercise performed on a stationary bike.  It focuses on endurance, strength, intervals, high intensity and recovery.  Participants simulate hill climbs, sprints and flat roads.'
+        };
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const className = item.dataset.name;
+                const imageSrc = item.querySelector('img').src;
+
+                modalTitle.textContent = className;
+                modalImage.src = imageSrc;
+                modalDescription.textContent = classDescriptions[className];
+                modal.style.display = 'block';
+            });
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        enrollButton.addEventListener('click', () => {
+            alert('Thank you for your interest! Please contact us to complete your enrollment.');
+            modal.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
+
