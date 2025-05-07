@@ -1,10 +1,10 @@
- <!DOCTYPE html>
+         <!DOCTYPE html>
 <html>
 <head>
     <title>Feedback Form</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: 'Arial Black', sans-serif;
             background-image: url('Gym%20Poster2.jfif');
             background-size: cover;
             background-position: center;
@@ -16,30 +16,45 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #343a40; /* Fallback color */
+            background-color: #343a40;
         }
 
         .feedback-container {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            width: 80%;
-            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+            width: 90%;
+            max-width: 700px;
+            animation: fadeIn 1s ease, pulse 2s infinite alternate;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes pulse {
+          from { transform: scale(1); }
+          to { transform: scale(1.04); }
         }
 
         h1 {
             text-align: center;
-            color: #ffc107;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px #000;
+            color: #ffdb58;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 8px #000;
+            letter-spacing: 2px;
+            font-size: 2.5em;
         }
 
         label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-weight: bold;
-            color: #e0f7fa;
+            color: #ffefd5;
+            text-shadow: 1px 1px 2px #000;
+            font-size: 1.1em;
         }
 
         input[type="text"],
@@ -47,14 +62,27 @@
         select,
         textarea {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 8px;
             box-sizing: border-box;
-            background-color: #495057;
+            background-color: #555;
             color: #fff;
+            font-size: 1.1em;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
         }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
 
         select {
             appearance: none;
@@ -62,34 +90,47 @@
             -moz-appearance: none;
             background-image: url('data:image/svg+xml;utf8,<svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
             background-repeat: no-repeat;
-            background-position-x: 95%;
+            background-position-x: 98%;
             background-position-y: 50%;
+            padding-right: 30px;
         }
 
         textarea {
             resize: vertical;
+            height: 120px;
         }
 
         input[type="radio"] {
-            margin-right: 5px;
+            margin-right: 10px;
+            transform: scale(1.2);
         }
 
         input[type="submit"] {
-            background-color: #ffc107;
-            color: #333;
-            padding: 12px 20px;
+            background-color: #ffc700;
+            color: #000;
+            padding: 15px 30px;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
-            font-size: 1em;
+            font-size: 1.2em;
             font-weight: bold;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
         }
 
         input[type="submit"]:hover {
-            background-color: #e0a800;
+            background-color: #e6b800;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
         }
+
+        .gender-options {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
     </style>
 </head>
 <body>
@@ -98,13 +139,13 @@
         <form action="thank_you.html" method="post">
 
             <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br><br>
+            <input type="text" id="name" name="name" required><br><br>
 
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br><br>
+            <input type="email" id="email" name="email" required><br><br>
 
             <label for="rating">Overall Experience:</label><br>
-            <select id="rating" name="rating">
+            <select id="rating" name="rating" required>
                 <option value="excellent">Excellent</option>
                 <option value="good">Good</option>
                 <option value="average">Average</option>
@@ -113,22 +154,25 @@
             </select><br><br>
 
             <label for="comments">Comments:</label><br>
-            <textarea id="comments" name="comments" rows="5" cols="50"></textarea><br><br>
+            <textarea id="comments" name="comments" rows="5" cols="50" required></textarea><br><br>
 
             <label for="suggestions">Suggestions (Optional):</label><br>
             <textarea id="suggestions" name="suggestions" rows="3" cols="50"></textarea><br><br>
 
             <label for="gender">Gender:</label><br>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label><br>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br>
-            <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label><br><br>
+            <div class="gender-options">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other" required>
+                <label for="other">Other</label>
+            </div><br><br>
 
             <input type="submit" value="Submit Feedback">
 
         </form>
     </div>
 </body>
-</html>                                                                                          
+</html>
+                                                 
