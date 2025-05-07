@@ -1,237 +1,214 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - The Workout Zone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('Background%20Image.jpg');
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            overflow: hidden;
+        }
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
- <!-- Bootstrap JS and dependencies -->
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #4a148c, #00acc1, #4a148c, #00acc1);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s infinite alternate;
+            opacity: 0.6;
+            z-index: -1;
+        }
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-  
-  <title>Home - The Workout Zone</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-  body {
-  background-image: url('Background%20Image.jpg');
-  font-family: 'Montserrat', sans-serif; /* Modern, bold font */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  overflow: hidden; /* To contain the animated background */
-  }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 10;
+        }
 
-  /* Animated Background Overlay */
-  body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #4a148c, #00acc1, #4a148c, #00acc1);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s infinite alternate;
-  opacity: 0.6;
-  z-index: -1;
-  }
+        h1 {
+            color: #ffc107;
+            font-size: 4em;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 6px #000000;
+            animation: pulse 2s infinite alternate;
+        }
 
-  @keyframes gradientAnimation {
-  0% {
-  background-position: 0% 50%;
-  }
-  50% {
-  background-position: 100% 50%;
-  }
-  100% {
-  background-position: 0% 50%;
-  }
-  }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
 
-  header {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 40px 0;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  position: relative; /* For potential stacking context */
-  z-index: 10; /* Ensure it's above the background */
-  }
+        nav {
+            text-align: center;
+            margin-top: 30px;
+        }
 
-  h1 {
-  color: #ffc107; /* Vibrant highlight color */
-  font-size: 4em;
-  margin: 0;
-  letter-spacing: 2px;
-  text-shadow: 3px 3px 6px #000000;
-  animation: pulse 2s infinite alternate;
-  }
+        nav a {
+            color: #e0f7fa;
+            text-decoration: none;
+            margin: 0 20px;
+            padding: 12px 25px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            font-size: 1.1em;
+        }
 
-  @keyframes pulse {
-  0% {
-  transform: scale(1);
-  }
-  100% {
-  transform: scale(1.05);
-  }
-  }
+        nav a:hover {
+            background-color: #00acc1;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        }
 
-  nav {
-  text-align: center;
-  margin-top: 30px;
-  }
+        main {
+            flex-grow: 1;
+            padding: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-  nav a {
-  color: #e0f7fa;
-  text-decoration: none;
-  margin: 0 20px;
-  padding: 12px 25px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  font-weight: bold;
-  letter-spacing: 1.2px;
-  font-size: 1.1em;
-  }
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(20px);
+            text-align: center;
+            animation: slideIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
 
-  nav a:hover {
-  background-color: #00acc1; /* Cyan hover color */
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-  }
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-  main {
-  flex-grow: 1;
-  padding: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  }
+        .container h2 {
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px #000;
+        }
 
-  .container {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 60px;
-  border-radius: 20px;
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(20px);
-  text-align: center;
-  animation: slideIn 1s ease-out forwards;
-  opacity: 0;
-  transform: translateY(30px);
-  }
+        .container p {
+            line-height: 2;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 2px #000000;
+            font-size: 1.2em;
+            color: #f0f8ff;
+        }
 
-  @keyframes slideIn {
-  to {
-  opacity: 1;
-  transform: translateY(0);
-  }
-  }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 12px;
+            background-color: #ffc107;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        }
 
-  .container h2 {
-  color: #fff;
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  text-shadow: 2px 2px 4px #000;
-  }
+        .cta-button:hover {
+            background-color: #e0a800;
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        }
 
-  .container p {
-  line-height: 2;
-  margin-bottom: 40px;
-  text-shadow: 1px 1px 2px #000000;
-  font-size: 1.2em;
-  color: #f0f8ff;
-  }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #e0f7fa;
+            text-shadow: 1px 1px 2px #000000;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 10;
+        }
 
-  .cta-button {
-  display: inline-block;
-  padding: 15px 35px;
-  border-radius: 12px;
-  background-color: #ffc107;
-  color: #333;
-  text-decoration: none;
-  font-size: 1.3em;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-  }
+        footer p {
+            margin: 10px 0;
+            font-size: 1em;
+            letter-spacing: 0.8px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>The Workout Zone</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="classes.html">Classes</a>
+            <a href="contact.html">Contact</a>
+             <a href="feedback.html">Feedback</a>
+        </nav>
+    </header>
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="container">
+                    <h2>Welcome to Your Fitness Journey</h2>
+                    <p>Unlock your full potential with The Workout Zone. Explore premium equipment, expert guidance, and a supportive community dedicated to your success.</p>
+                    <a href="library.html" class="cta-button">Discover Equipment</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 @The Workout Zone</p>
+        <p>Elevate Your Fitness.</p>
+    </footer>
+</body>
+</html>
 
-  .cta-button:hover {
-  background-color: #e0a800;
-  transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-  }
-
-  footer {
-  text-align: center;
-  padding: 40px 0;
-  color: #e0f7fa;
-  text-shadow: 1px 1px 2px #000000;
-  background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
-  position: relative;
-  z-index: 10;
-  }
-
-  footer p {
-  margin: 10px 0;
-  font-size: 1em;
-  letter-spacing: 0.8px;
-  }
-  </style>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
- </head>
- <body>
-  <header>
-  <h1>The Workout Zone</h1>
-  <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="classes.html">Classes</a>
-  <a href="contact.html">Contact</a>
-  <a href="feedback.html">Feedback</a>
-  </nav>
-  </header>
-  <main class="container my-5">
-
-<div class="row">
-
-<div class="col-md-8">
-
-</div>
-
-<div class="col-md-4">
-
-<div class="card">
-
-<div class="card-body">
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-  <div class="container">
-  <h2>Welcome to Your Fitness Journey</h2>
-  <p>Unlock your full potential with The Workout Zone. Explore premium equipment, expert guidance, and a supportive community dedicated to your success.</p>
-  <a href="library.html" class="cta-button">Discover Equipment</a>
-  </div>
-  </main>
-  <footer>
-  <p>&copy; 2025 @The Workout Zone</p>
-  <p>Elevate Your Fitness.</p>
-  </footer>
- </body>
- </html>
