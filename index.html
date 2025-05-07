@@ -235,9 +235,8 @@
         <h1>The Workout Zone</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="about.html>About</a>
+            <a href="about.html">About</a>
             <a href="classes.html">Classes</a>
-            <a href="equipment.html">Equipment</a>
             <a href="contact.html">Contact</a>
             <a href="feedback.html">Feedback</a>
         </nav>
@@ -264,7 +263,7 @@
             const navLinks = document.querySelectorAll('nav a');
 
             navLinks.forEach(link => {
-                if(link.href === currentLocation) {
+                if (link.href === currentLocation) {
                     link.classList.add('active');
                 }
             });
