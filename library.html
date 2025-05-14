@@ -48,31 +48,42 @@
             text-align: center;
             font-size: 1.1em;
             color: #6c757d;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
-        .equipment-overview {
+        .equipment-category {
             display: flex;
             justify-content: center;
             align-items: center;
             margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .equipment-category:nth-child(even) {
+            flex-direction: row-reverse; /* Alternate image position */
         }
         .equipment-image {
             flex: 1;
             max-width: 50%;
-            padding-right: 20px;
+            padding: 0 20px;
+            box-sizing: border-box;
         }
         .equipment-image img {
             width: 100%;
             border-radius: 8px;
+            display: block; /* Prevent extra space below image */
         }
         .equipment-list {
             flex: 1;
             max-width: 50%;
+            padding: 0 20px;
+            box-sizing: border-box;
         }
         .equipment-list h2 {
             font-size: 2em;
             color: #0078d7;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .equipment-list ul {
             list-style: none;
@@ -80,7 +91,7 @@
             margin: 0;
         }
         .equipment-list ul li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-size: 1.1em;
             color: #343a40;
         }
@@ -94,13 +105,18 @@
 
         /* Responsive layout for smaller screens */
         @media (max-width: 768px) {
-            .equipment-overview {
+            .equipment-category {
                 flex-direction: column;
+            }
+            .equipment-category:nth-child(even) {
+                flex-direction: column; /* Keep consistent on small screens */
             }
             .equipment-image, .equipment-list {
                 max-width: 100%;
-                padding: 0;
-                margin-bottom: 20px;
+                padding: 15px 0;
+            }
+            .equipment-image {
+                margin-bottom: 15px;
             }
         }
     </style>
@@ -116,9 +132,10 @@
     </header>
     <main>
         <p>Explore our wide range of gym equipment designed to help you achieve your fitness goals.</p>
-        <div class="equipment-overview">
+
+        <div class="equipment-category">
             <div class="equipment-image">
-                <img src="Big%20Guy.jpg" alt="Big Guy">
+                <img src="Big%20Guy.jpg" alt="Strength Training">
             </div>
             <div class="equipment-list">
                 <h2>Strength Equipment</h2>
@@ -133,29 +150,23 @@
                 </ul>
             </div>
         </div>
-          <img src="people_on_treadmill_1000x667.jpg" alt="Treadmill">
-         <div class="equipment-list">
+
+        <div class="equipment-category">
+            <div class="equipment-image">
+                <img src="people_on_treadmill_1000x667.jpg" alt="Treadmill">
+            </div>
+            <div class="equipment-list">
                 <h2>Cardio Equipment</h2>
                 <ul>
-                    <li>Artofit</li>
                     <li>Treadmill</li>
                     <li>Elliptical Cross-Trainer</li>
-                    <li>Smith machines</li>
                     <li>Elliptical Bike</li>
+                    <li>Rowing Machines</li>
+                    <li>Stationary Bikes</li>
                 </ul>
             </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-        
     </main>
     <footer>
         <p>&copy; 2025 The Workout Zone</p>
