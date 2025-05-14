@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            background-image: url('566w-QJpacUY1QFs.webp');
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
@@ -19,16 +18,26 @@
             box-sizing: border-box;
             background-size: cover;
             background-position: center;
+            /* Updated, more robust background image styling */
+            background-image: url('566w-QJpacUY1QFs.webp'); /* Keep your original image */
+            background-size: cover;  /* Cover the entire viewport */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent image repetition */
         }
         header {
             background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: relative; /* Important for z-index if needed */
+            z-index: 1;
         }
         h1 {
             margin: 0;
             font-size: 2.5em;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         nav {
             text-align: center;
@@ -39,14 +48,23 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.2s ease;
+            padding: 8px 16px;
+            border-radius: 5px;
+            display: inline-block; /* Ensure padding applies */
         }
         nav a:hover {
             color: #ffc107;
+            transform: translateY(-2px);
+            background-color: rgba(0, 0, 0, 0.3);
         }
         main {
             flex-grow: 1;
             padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: flex-start; /* Align items to the start of the container */
         }
         main > p {
             text-align: center;
@@ -54,43 +72,59 @@
             color: #eee;
             margin-bottom: 20px;
             text-shadow: 1px 1px 2px #000;
+            max-width: 80%; /* Limit text width for better readability */
+            line-height: 1.7;
         }
         .gallery-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+            justify-content: center; /* Distribute items evenly */
+            gap: 20px;
+            margin-top: 20px;
+            width: 100%; /* Ensure gallery takes full width of main */
         }
         .gallery-item {
             background-color: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: calc(30% - 15px);
-            margin-bottom: 15px;
-            transition: transform 0.3s ease-in-out;
-            backdrop-filter: blur(5px);
-            min-width: 200px;
-            cursor: pointer; /* Add cursor pointer */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            width: calc(32% - 20px); /* Slightly wider, considering gap */
+            margin-bottom: 25px; /* Increased margin */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            backdrop-filter: blur(10px);
+            min-width: 250px; /* Increased minimum width */
+            cursor: pointer;
+            display: flex; /* Use flexbox for vertical alignment */
+            flex-direction: column;
+            align-items: stretch; /* Stretch items to container height */
         }
         .gallery-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transform: scale(1.04);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
         .gallery-item img {
             width: 100%;
-            height: auto;
+            height: 200px; /* Increased height */
             display: block;
-            max-height: 150px;
             object-fit: cover;
+            transition: transform 0.3s ease-in-out; /* Add smooth transition */
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .gallery-item:hover img{
+             transform: scale(1.1);
         }
         .desc {
-            padding: 10px;
+            padding: 15px;
             text-align: center;
             color: #eee;
-            font-size: 0.9em;
+            font-size: 1.1em; /* Increased font size */
             text-shadow: 1px 1px 2px #000;
+            flex-grow: 1; /* Allow description to take up available space */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         /* Modal Styles */
@@ -103,58 +137,63 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0,0,0,0.85); /* Slightly darker */
+            backdrop-filter: blur(15px);
         }
 
         .modal-content {
-            background-color: #fff;
-            margin: 10% auto;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 600px;
-            width: 90%;
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+            margin: 5% auto; /* Reduced margin, was 10% */
+            padding: 30px; /* Increased padding */
+            border-radius: 12px; /* More rounded */
+            max-width: 700px; /* Increased max-width */
+            width: 95%; /* Slightly wider */
             position: relative;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.5); /* Stronger shadow */
             animation: fadeIn 0.3s;
+            color: #333;
         }
 
         @keyframes fadeIn {
-          from {opacity: 0;}
-          to {opacity: 1;}
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
         }
 
         .modal-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
+            margin-bottom: 25px; /* Increased margin */
+            padding-bottom: 15px;
             border-bottom: 1px solid #ddd;
         }
 
         .modal-header h2 {
             margin: 0;
-            font-size: 1.5em;
-            color: #333;
+            font-size: 2em; /* Increased font size */
+            color: #2c3e50; /* Darker heading color */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
 
         .close-button {
             position: absolute;
-            top: 10px;
-            right: 15px;
+            top: 15px; /* Adjusted position */
+            right: 20px; /* Adjusted position */
             color: #aaa;
-            font-size: 28px;
+            font-size: 36px; /* Increased size */
             font-weight: bold;
             cursor: pointer;
-            transition: color 0.3s;
+            transition: color 0.2s; /* Smoother transition */
             border: none;
             background: transparent;
             padding: 0;
+            opacity: 0.8;
         }
 
         .close-button:hover,
         .close-button:focus {
             color: #000;
+            opacity: 1;
             text-decoration: none;
         }
 
@@ -164,58 +203,82 @@
 
         .modal-body img {
             width: 100%;
-            max-height: 300px;
+            max-height: 400px; /* Increased max height */
             object-fit: contain;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 25px; /* Increased margin */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
 
         .modal-body p {
-            font-size: 1.1em;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            font-size: 1.2em; /* Increased font size */
+            color: #444; /* Slightly darker text */
+            line-height: 1.8; /* Increased line height */
+            margin-bottom: 30px; /* Increased margin */
+            text-align: left;
         }
 
         .modal-footer {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 30px; /* Increased margin */
         }
 
         .modal-footer button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
+            background-color: #ffc107; /* Use your theme color */
+            color: #34495e;
+            padding: 15px 30px; /* Increased padding */
             border: none;
-            border-radius: 5px;
+            border-radius: 8px; /* Rounded corners */
             cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
+            font-size: 1.1em; /* Increased font size */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
         }
 
         .modal-footer button:hover {
-            background-color: #0056b3;
+            background-color: #e0a800;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
         }
 
+        @media (max-width: 992px) {
+            .gallery-item {
+                width: calc(50% - 20px);
+                min-width: 280px;
+            }
+        }
 
         @media (max-width: 768px) {
             .gallery-item {
-                width: calc(50% - 15px);
+                width: 100%;
+                min-width: 300px;
             }
+             nav a{
+                margin: 5px;
+             }
         }
+
         @media (max-width: 480px) {
             .gallery-item {
                 width: 100%;
+                min-width: auto;
             }
-             .modal-content {
-                margin: 20px auto;
-                padding: 15px;
+            h1{
+                font-size: 2.5em;
+            }
+            .modal-content {
+                margin: 10px auto;
+                padding: 20px;
             }
             .modal-header h2{
-               font-size: 1.2em;
+                font-size: 1.5em;
             }
             .modal-body p{
-                font-size: 1em;
+                font-size: 1.1em;
+            }
+            nav a{
+                font-size: 0.9em;
             }
         }
     </style>
@@ -227,12 +290,12 @@
             <a href="index.html">Home</a> |
             <a href="about.html">About</a> |
             <a href="contact.html">Contact</a> |
-            <a href="library.html">Library</a>
+            <a href="library.html">Library</a> |
             <a href="classes.html">Classes</a>
         </nav>
     </header>
     <main>
-        <p>Here are our different classes depending on your favourite workout areas, from simple and chilled vibes to high intensity, so choose your favourite and enroll and let's get to work!!!!!</p>
+        <p>Here are our different classes, offering a range from relaxed to high-intensity workouts.  Choose your favorite and <b>enroll</b> to begin <b>your</b> journey!</p>
         <div class="gallery-container">
             <div class="gallery-item" data-name="Yoga">
                 <img src="Yoga%20Pose.jpg" alt="Yoga Class">
@@ -260,7 +323,7 @@
             </div>
         </div>
     </main>
-     <div id="classModal" class="modal">
+    <div id="classModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <h2></h2>
@@ -278,7 +341,6 @@
     <footer>
         <p>&copy; 2025 The Workout Zone</p>
     </footer>
-
     <script>
         const galleryItems = document.querySelectorAll('.gallery-item');
         const modal = document.getElementById('classModal');
@@ -326,4 +388,5 @@
     </script>
 </body>
 </html>
+
 
