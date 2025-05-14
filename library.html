@@ -6,20 +6,18 @@
     <title>Equipment</title>
     <style>
         body {
-            background-image: url('Workout%20pic.webp'); /* Assuming image is in the same folder */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: white;
+            color: #333;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             box-sizing: border-box;
-            background-size: cover;
-            background-position: center;
+            background-color: #f8f9fa;
         }
         header {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: #0078d7;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -33,7 +31,7 @@
             margin-top: 10px;
         }
         nav a {
-            color: #eee;
+            color: #fff;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
@@ -49,99 +47,60 @@
         main > p {
             text-align: center;
             font-size: 1.1em;
-            color: #eee;
+            color: #6c757d;
             margin-bottom: 20px;
-            text-shadow: 1px 1px 2px #000;
         }
-        .gallery-container {
+        .equipment-overview {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start; /* Align items to the start of the row */
-            gap: 15px; /* Reduced gap */
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
         }
-        .gallery-item {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .equipment-image {
+            flex: 1;
+            max-width: 50%;
+            padding-right: 20px;
+        }
+        .equipment-image img {
+            width: 100%;
             border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: calc(20% - 15px); /* Adjust for more items per row */
-            margin-bottom: 15px; /* Reduced margin */
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            backdrop-filter: blur(5px);
-            position: relative; /* For description slide-up */
         }
-        .gallery-item:hover {
-            transform: scale(1.05); /* Slightly less scaling */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+        .equipment-list {
+            flex: 1;
+            max-width: 50%;
         }
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            max-height: 150px; /* Reduced max height */
-            object-fit: cover; /* Maintain aspect ratio */
-            transition: transform 0.3s ease-in-out; /* For image zoom */
-        
+        .equipment-list h2 {
+            font-size: 2em;
+            color: #0078d7;
+            margin-bottom: 20px;
         }
-        .desc {
-            padding: 10px; /* Reduced padding */
-            text-align: center;
-            color: #eee;
-            font-size: 0.9em; /* Slightly smaller font */
-            text-shadow: 1px 1px 2px #000;
-            position: absolute;
-            bottom: -100%; /* Initially hidden below */
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            transition: bottom 0.3s ease-in-out;
-            padding: 15px 10px; /* Adjust padding */
-            box-sizing: border-box; /* Ensure padding doesn't increase width */
-    
+        .equipment-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .equipment-list ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            color: #343a40;
         }
         footer {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #eee;
+            background-color: #343a40;
+            color: #fff;
             text-align: center;
             padding: 15px 0;
             font-size: 0.9em;
-            text-shadow: 1px 1px 2px #000;
-        }
-
-        /* Add to Cart Button Styles */
-        .add-to-cart-btn {
-            display: block;
-            width: 80%;
-            margin: 10px auto;
-            padding: 8px 15px;
-            border: none;
-            border-radius: 5px;
-            background-color: #28a745; /* Green */
-            color: white;
-            cursor: pointer;
-            font-size: 0.9em;
-            transition: background-color 0.3s ease;
-        }
-
-        .add-to-cart-btn:hover {
-            background-color: #218838; /* Darker Green */
-        }
-
-        .add-to-cart-btn.added {
-            background-color: #dc3545; /* Red */
-            color: white;
         }
 
         /* Responsive layout for smaller screens */
         @media (max-width: 768px) {
-            .gallery-item {
-                width: calc(33.33% - 15px);
+            .equipment-overview {
+                flex-direction: column;
             }
-        }
-        @media (max-width: 480px) {
-            .gallery-item {
-                width: calc(50% - 15px);
+            .equipment-image, .equipment-list {
+                max-width: 100%;
+                padding: 0;
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -156,104 +115,32 @@
         </nav>
     </header>
     <main>
-        <p>Here Are Our Various Gym Equipment To Help You With Your Workouts, From Big Machines to Small and Simple, We've Got You Covered, So Browse Through and Choose Your Favourite!!</p>
-        <div class="gallery-container">
-            <div class="gallery-item">
-                <a target="_blank" href="Artofit.jfif">
-                    <img src="Artofit.jfif" alt="Ab Roller">
-                </a>
-                <div class="desc">Ab Roller</div>
-                <button class="add-to-cart-btn">Add to Cart</button>
+        <p>Explore our wide range of gym equipment designed to help you achieve your fitness goals.</p>
+        <div class="equipment-overview">
+            <div class="equipment-image">
+                <img src="equipment-image.jpg" alt="Gym Equipment">
             </div>
-            <div class="gallery-item">
-                <a target="_blank" href="Balance%20Balls.jfif">
-                    <img src="Balance%20Balls.jfif" alt="Balance Balls">
-                </a>
-                <div class="desc">Balance Balls</div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <a target="_blank" href="Dumbells.jpg">
-                    <img src="Dumbells.jpg" alt="Dumbells">
-                </a>
-                <div class="desc">Dumbell Rack</div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <a target="_blank" href="Folded%20Yoga%20Mats.jfif">
-                    <img src="Folded%20Yoga%20Mats.jfif" alt="Yoga Mats">
-                </a>
-                <div class="desc">Folded Yoga Mats</div>
-                <button class="fav-btn">Add to Favorites</button>
-                <button class="add-to-cart-btn">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <a target="_blank" href="Elliptical%20Cross%20Trainer.jpg">
-                    <img src="Elliptical%20Cross%20Trainer.jpg" alt="Cross trainer">
-                </a>
-                <div class="desc">Elliptical Cross Trainer</div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <a target="_blank" href="Elliptical%20Bike.jpg">
-                    <img src="Elliptical%20Bike.jpg" alt="Bike">
-                </a>
-                <div class="desc">Elliptical Bike</div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <a target="_blank" href="Treadmill.jfif">
-                    <img src="Treadmill.jfif" alt="Treadmill">
-                </a>
-                <div class="desc">Treadmill</div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <a target="_blank" href="Pulley.png">
-                    <img src="Pulley.png" alt="Pulley">
-                </a>
-                <div class="desc">Pulley</div>
-                <button class="add-to-cart-btn">Add to Cart</button>
-            </div>
-            <div class="gallery-item">
-                <a target="_blank" href="Heavy%20Duty%20Resistance%20Bands.jpg">
-                    <img src="Heavy%20Duty%20Resistance%20Bands.jpg" alt="Resistance Bands">
-                </a>
-                <div class="desc">Heavy Duty Resistance Bands</div>
-                <button class="add-to-cart-btn">Add to Cart</button>
+            <div class="equipment-list">
+                <h2>Strength Equipment</h2>
+                <ul>
+                    <li>Cable Towers</li>
+                    <li>Fitbench</li>
+                    <li>Mobility & Stretching Room</li>
+                    <li>Free Weights (Dumbbells & Barbells)</li>
+                    <li>Abs and stretching</li>
+                    <li>Dual Adjustable Pulley</li>
+                    <li>Smith machines</li>
+                    <li>30 Minute circuit</li>
+                </ul>
             </div>
         </div>
     </main>
     <footer>
         <p>&copy; 2025 The Workout Zone</p>
     </footer>
-
-    <script>
-        // Favorite Button Functionality
-        const favButtons = document.querySelectorAll('.fav-btn');
-        favButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                this.classList.toggle('favorited');
-                // In a real application, you would also update data here
-            });
-        });
-
-        // Add to Cart Functionality
-        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                this.classList.toggle('added');
-                if (this.classList.contains('added')) {
-                    this.textContent = "Added!";
-                    // In a real application, you would add the item to the cart here
-                } else {
-                    this.textContent = "Add to Cart";
-                }
-            });
-        });
-    </script>
 </body>
 </html>
+
 
      
          
