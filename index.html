@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -369,8 +369,8 @@ footer p {
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <button class="dropdown-toggle">Resources</button>
-                    <div class="dropdown-menu">
+                    <button class="dropdown-toggle" id="resources-dropdown">Resources</button>
+                    <div class="dropdown-menu" id="resources-menu">
                         <a  href="classes.html">Classes</a>
                         <a  href="library.html">Library</a>
                     </div>
@@ -418,8 +418,8 @@ footer p {
             });
 
             // Dropdown functionality
-            const dropdownToggle = document.querySelector('.dropdown-toggle');
-            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const dropdownToggle = document.getElementById('resources-dropdown');
+            const dropdownMenu = document.getElementById('resources-menu');
 
             if (dropdownToggle && dropdownMenu) {
                 dropdownToggle.addEventListener('click', function() {
@@ -437,8 +437,5 @@ footer p {
     </script>
 </body>
 </html>
-
-
-
 
 
