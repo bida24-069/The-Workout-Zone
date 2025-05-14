@@ -137,6 +137,7 @@
             font-size: 2.5em;
             margin-bottom: 30px;
             text-shadow: 2px 2px 4px #000;
+            transition: color 0.5s ease; /* Added transition for color animation */
         }
 
         .container p {
@@ -379,13 +380,6 @@
             <div class="buttons-container">
                 <a href="sign up.html" class="signup-button"  id="signup">Sign Up Now</a>
             </div>
-             <div id="interactive-elements" style="margin-top: 50px;">
-                <h3>Interactive Elements</h3>
-                <p>Click the buttons below to see interactive changes:</p>
-                <button id="change-heading-btn" class="btn btn-warning">Change Heading</button>
-                <button id="toggle-text-btn" class="btn btn-info">Toggle Text</button>
-                <button id="change-background-btn" class="btn btn-danger">Change Background</button>
-            </div>
         </div>
     </main>
     <footer>
@@ -435,45 +429,16 @@
                 });
             }
 
-            // --- Interactive Elements ---
-            const mainHeading = document.querySelector('.container h2');
-            const mainTextElement = document.getElementById('main-text');
-            const containerElement = document.querySelector('.container');
+            // --- Color animation for heading ---
+            const headingElement = document.querySelector('.container h2');
+            let colorIndex = 0;
+            const colors = ['#ffc107', '#00acc1', '#ff6f61', '#388e3c', '#9c27b0']; // Array of colors
+            const intervalDuration = 2000; // Change color every 2 seconds
 
-            const changeHeadingButton = document.getElementById('change-heading-btn');
-            const toggleTextButton = document.getElementById('toggle-text-btn');
-            const changeBackgroundButton = document.getElementById('change-background-btn');
-
-            let originalHeadingText = mainHeading.textContent;
-            let isTextVisible = true;
-            let originalBackgroundColor = window.getComputedStyle(containerElement).backgroundColor;
-
-            changeHeadingButton.addEventListener('click', function() {
-                if (mainHeading.textContent === originalHeadingText) {
-                    mainHeading.textContent = "Welcome to the Interactive Workout Zone!";
-                } else {
-                    mainHeading.textContent = originalHeadingText;
-                }
-            });
-
-            toggleTextButton.addEventListener('click', function() {
-                if (isTextVisible) {
-                    mainTextElement.style.display = 'none';
-                    isTextVisible = false;
-                } else {
-                    mainTextElement.style.display = 'block';
-                    isTextVisible = true;
-                }
-            });
-
-            changeBackgroundButton.addEventListener('click', function() {
-                const newColor = '#'+Math.floor(Math.random()*16777215).toString(16);
-                if (containerElement.style.backgroundColor === originalBackgroundColor) {
-                    containerElement.style.backgroundColor = newColor;
-                } else {
-                    containerElement.style.backgroundColor = originalBackgroundColor;
-                }
-            });
+            setInterval(function() {
+                headingElement.style.color = colors[colorIndex];
+                colorIndex = (colorIndex + 1) % colors.length; // Cycle through the colors
+            }, intervalDuration);
         });
     </script>
 </body>
