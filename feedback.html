@@ -95,8 +95,7 @@
 <body>
     <div class="feedback-container">
         <h1>Feedback Form</h1>
-        <form action="thank_you.html" method="post">
-
+        <form action="thank_you.html" method="post" id="feedbackForm">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" required><br><br>
 
@@ -129,10 +128,20 @@
             </div><br><br>
 
             <input type="submit" value="Submit Feedback">
-
         </form>
-        
     </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // You can add any client-side validation here if needed
+
+            // Redirect to the thank you page
+            window.location.href = 'thank_you.html';
+        });
+    </script>
 </body>
 </html>
 
