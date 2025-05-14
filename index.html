@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,345 +8,344 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <style>
-       body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    color: #fff;
-    overflow-x: hidden;
-}
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
 
-/* Updated background image URL */
-body {
-    /* Original settings - commenting out */
-    /* background-size: cover; */
-    background-position: center;
-    /* background-repeat: no-repeat; */
+        /* Updated background image URL */
+        body {
+            background-image: url('2962bcddfac9818eb891d1cdff22b508.jpg'); 
+            /* Original settings - commenting out */
+            /* background-size: cover; */
+            background-position: center;
+            /* background-repeat: no-repeat; */
 
-    /* New settings to control image size and repetition */
-    background-size: contain; /* Ensures the image is scaled down to fit within the container */
-    background-repeat: no-repeat; /* Prevents the image from tiling if it's smaller than the screen */
-}
+            /* New settings to control image size and repetition */
+            background-size: contain; /* Ensures the image is scaled down to fit within the container */
+            background-repeat: no-repeat; /* Prevents the image from tiling if it's smaller than the screen */
+        }
 
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Removed the gradient colors, setting a solid dark background */
-    background: rgba(0, 0, 0, 0.7);
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s infinite alternate;
-    opacity: 0.7;
-    z-index: -1;
-}
-}
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Removed the gradient colors, setting a solid dark background */
+            background: rgba(0, 0, 0, 0.7);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s infinite alternate;
+            opacity: 0.7;
+            z-index: -1;
+        }
+        }
 
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
-header {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 40px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 10;
-}
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 10;
+        }
 
-h1 {
-    color: #ffc107;
-    font-size: 4em;
-    margin: 0;
-    letter-spacing: 2px;
-    text-shadow: 3px 3px 6px #000000;
-    animation: pulse 2s infinite alternate;
-}
+        h1 {
+            color: #ffc107;
+            font-size: 4em;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 6px #000000;
+            animation: pulse 2s infinite alternate;
+        }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.05);
-    }
-}
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.05);
+            }
+        }
 
-nav {
-    text-align: center;
-    margin-top: 30px;
-}
+        nav {
+            text-align: center;
+            margin-top: 30px;
+        }
 
-nav a {
-    color: #e0f7fa;
-    text-decoration: none;
-    margin: 0 20px;
-    padding: 12px 25px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    font-size: 1.1em;
-    display: inline-block;
-}
+        nav a {
+            color: #e0f7fa;
+            text-decoration: none;
+            margin: 0 20px;
+            padding: 12px 25px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            font-size: 1.1em;
+            display: inline-block;
+        }
 
-nav a:hover {
-    background-color: #00acc1;
-    color: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-}
+        nav a:hover {
+            background-color: #00acc1;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        }
 
-main {
-    flex-grow: 1;
-    padding: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        main {
+            flex-grow: 1;
+            padding: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.container {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 60px;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(20px);
-    text-align: center;
-    animation: slideIn 1s ease-out forwards;
-    opacity: 0;
-    transform: translateY(30px);
-}
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(20px);
+            text-align: center;
+            animation: slideIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
 
-@keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-.container h2 {
-    color: #fff;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 4px #000;
-}
+        .container h2 {
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px #000;
+        }
 
-.container p {
-    line-height: 2;
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 2px #000000;
-    font-size: 1.2em;
-    color: #f0f8ff;
-}
+        .container p {
+            line-height: 2;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 2px #000000;
+            font-size: 1.2em;
+            color: #f0f8ff;
+        }
 
-.cta-button {
-    display: inline-block;
-    padding: 15px 35px;
-    border-radius: 12px;
-    background-color: #ffc107;
-    color: #333;
-    text-decoration: none;
-    font-size: 1.3em;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-    margin: 0 10px;
-}
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 12px;
+            background-color: #ffc107;
+            color: #333;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+            margin: 0 10px;
+        }
 
-.cta-button:hover {
-    background-color: #e0a800;
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-}
+        .cta-button:hover {
+            background-color: #e0a800;
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        }
 
-.signup-button {
-    display: inline-block;
-    padding: 15px 35px;
-    border-radius: 12px;
-    background-color: #00acc1;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.3em;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-    margin: 0 10px;
-}
+        .signup-button {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 12px;
+            background-color: #00acc1;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+            margin: 0 10px;
+        }
 
-.signup-button:hover {
-    background-color: #008a9a;
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-}
+        .signup-button:hover {
+            background-color: #008a9a;
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+        }
 
-footer {
-    text-align: center;
-    padding: 40px 0;
-    color: #e0f7fa;
-    text-shadow: 1px 1px 2px #000000;
-    background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 10;
-}
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #e0f7fa;
+            text-shadow: 1px 1px 2px #000000;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 10;
+        }
 
-footer p {
-    margin: 10px 0;
-    font-size: 1em;
-    letter-spacing: 0.8px;
-}
+        footer p {
+            margin: 10px 0;
+            font-size: 1em;
+            letter-spacing: 0.8px;
+        }
 
-/* Responsive navigation */
-@media (max-width: 768px) {
-    nav a {
-        margin: 5px;
-        padding: 10px 15px;
-        font-size: 0.9em;
-        display: inline-block;
-    }
+        /* Responsive navigation */
+        @media (max-width: 768px) {
+            nav a {
+                margin: 5px;
+                padding: 10px 15px;
+                font-size: 0.9em;
+                display: inline-block;
+            }
 
-    h1 {
-        font-size: 2.5em;
-    }
+            h1 {
+                font-size: 2.5em;
+            }
 
-    main {
-        padding: 20px;
-    }
+            main {
+                padding: 20px;
+            }
 
-    .container {
-        padding: 30px;
-    }
-}
+            .container {
+                padding: 30px;
+            }
+        }
 
-/* Navbar styles */
-.navbar {
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center;
-    padding: 20px 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 10;
-    width: 100%; /* Ensure the navbar spans the entire width */
-    box-sizing: border-box;
-}
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 10;
+            width: 100%; /* Ensure the navbar spans the entire width */
+            box-sizing: border-box;
+        }
 
-.navbar-nav {
-    display: flex;
-    flex-direction: row; /* Display items in a row */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+        .navbar-nav {
+            display: flex;
+            flex-direction: row; /* Display items in a row */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-.nav-item {
-    margin: 0 20px;
-}
+        .nav-item {
+            margin: 0 20px;
+        }
 
-.nav-link {
-    color: #e0f7fa;
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    font-size: 1.1em;
-    display: inline-block;
-}
+        .nav-link {
+            color: #e0f7fa;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            font-size: 1.1em;
+            display: inline-block;
+        }
 
-.nav-link:hover {
-    background-color: #00acc1;
-    color: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-}
+        .nav-link:hover {
+            background-color: #00acc1;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        }
 
-/* Dropdown styles */
-.dropdown {
-    position: relative;
-}
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+        }
 
-.dropdown-toggle {
-    color: #e0f7fa;
-    text-decoration: none;
-    padding: 12px 25px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    font-size: 1.1em;
-    display: inline-block;
-    cursor: pointer;
-    border: none;
-}
+        .dropdown-toggle {
+            color: #e0f7fa;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+            font-size: 1.1em;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+        }
 
-.dropdown-toggle:hover {
-    background-color: #00acc1;
-    color: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-}
+        .dropdown-toggle:hover {
+            background-color: #00acc1;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        }
 
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 0.25rem;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-}
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            float: left;
+            min-width: 160px;
+            padding: 5px 0;
+            margin: 2px 0 0;
+            font-size: 1rem;
+            color: #212529;
+            text-align: left;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 0.25rem;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
 
-.dropdown-menu a {
-    display: block;
-    padding: 0.5rem 1rem;
-    clear: both;
-    font-weight: 400;
-    color: #212529;
-    text-align: inherit;
-    white-space: nowrap;
-    background-color: transparent;
-    text-decoration: none;
-}
+        .dropdown-menu a {
+            display: block;
+            padding: 0.5rem 1rem;
+            clear: both;
+            font-weight: 400;
+            color: #212529;
+            text-align: inherit;
+            white-space: nowrap;
+            background-color: transparent;
+            text-decoration: none;
+        }
 
-.dropdown-menu a:hover, .dropdown-menu a:focus {
-    color: #fff;
-    background-color: #00acc1;
-}
+        .dropdown-menu a:hover, .dropdown-menu a:focus {
+            color: #fff;
+            background-color: #00acc1;
+        }
 
-.dropdown.show .dropdown-menu {
-    display: block;
-}
-
-
+        .dropdown.show .dropdown-menu {
+            display: block;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -361,19 +360,21 @@ footer p {
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="feedback.html">Feedback</a>
-                </li>
+                 <li class="nav-item">
+                        <a class="nav-link" href="feedback.html">Feedback</a>
+                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
-               <div class="dropdown">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-    Explore
-  </button>
-  <ul class="dropdown-menu">
-                        <a  href="classes.html">Classes</a>
-                        <a  href="library.html">Library</a>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                            Explore
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a  href="classes.html">Classes</a></li>
+                            <li><a  href="library.html">Library</a></li>
+                        </ul>
                     </div>
                 </li>
             </ul>
@@ -419,8 +420,8 @@ footer p {
             });
 
             // Dropdown functionality
-            const dropdownToggle = document.getElementById('resources-dropdown');
-            const dropdownMenu = document.getElementById('resources-menu');
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
 
             if (dropdownToggle && dropdownMenu) {
                 dropdownToggle.addEventListener('click', function() {
@@ -438,5 +439,6 @@ footer p {
     </script>
 </body>
 </html>
+
 
 
