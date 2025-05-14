@@ -131,7 +131,7 @@
             <input type="password" id="confirm-password" name="confirm-password" required>
             <div id="confirm-password-error" class="error-message"></div>
 
-            <button type="submit">Sign Up <a href="index.html"</button>
+            <button type="submit">Sign Up</button>
         </form>
     </div>
 
@@ -205,6 +205,7 @@
             event.preventDefault();
             let isValid = true;
 
+            // Re-run validation on submit to catch any missed fields
             if (!validateName()) isValid = false;
             if (!validateEmail()) isValid = false;
             if (!validatePassword()) isValid = false;
@@ -212,8 +213,14 @@
 
             if (isValid) {
                 // Simulate a successful signup process (replace with actual backend logic)
-                alert('Sign up successful!');
-                form.reset();
+                alert('Sign up successful! Redirecting to homepage.'); // Optional: Show alert before redirecting
+                form.reset(); // Optional: Reset the form fields
+
+                // Redirect to the homepage
+                window.location.replace('index.html');
+                // Using window.location.replace() is often better than window.location.href = '...'
+                // for navigation like this because it removes the current page from the browser's history,
+                // so the user can't press the back button to get back to the signup page after signing up.
             }
         });
     </script>
