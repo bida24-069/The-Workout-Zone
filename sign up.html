@@ -134,8 +134,7 @@
             <button type="submit">Sign Up</button>
         </form>
     </div>
-
-    <script>
+<script>
         const form = document.getElementById('signup-form');
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
@@ -212,17 +211,11 @@
             if (!validateConfirmPassword()) isValid = false;
 
             if (isValid) {
-                // Simulate a successful signup process (replace with actual backend logic)
-                alert('Sign up successful! Redirecting to homepage.'); // Optional: Show alert before redirecting
-                form.reset(); // Optional: Reset the form fields
-
-                // Redirect to the homepage
+                // Redirect to the homepage immediately after successful validation
                 window.location.replace('index.html');
-                // Using window.location.replace() is often better than window.location.href = '...'
-                // for navigation like this because it removes the current page from the browser's history,
-                // so the user can't press the back button to get back to the signup page after signing up.
             }
         });
     </script>
+    
 </body>
 </html>
