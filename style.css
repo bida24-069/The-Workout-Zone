@@ -79,12 +79,13 @@ a {
 </header>
 
 <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="#">Library</a>
-    <a href="#">Classes</a>
-    <a href="#">Feedback</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="library.html">Library</a>
+    <a href="classes.html">Classes</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="sign up.html">SignUp</a>
 </nav>
 
 
