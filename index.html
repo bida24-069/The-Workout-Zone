@@ -17,11 +17,13 @@
             flex-direction: column;
             min-height: 100vh;
             color: #fff;
-            overflow-x: hidden;
-            background-image: url('Background%20Poster.webp');
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
+           body {
+    /* ... other styles ... */
+    background-image: url('Background%20Poster.webp');
+    background-size: cover; /* Changed from contain to cover */
+    background-repeat: no-repeat;
+    background-position: center center; /* Center the image */
+}
 
         body::before {
             content: '';
