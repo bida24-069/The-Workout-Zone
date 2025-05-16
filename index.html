@@ -337,33 +337,48 @@
 </head>
 <body>
     <header>
-        <h1>The Workout Zone</h1>
-        <nav class="navbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="feedback.html">Feedback</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        Explore
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="classes.html">Classes</a></li>
-                        <li><a class="dropdown-item" href="library.html">Library</a></li>
+    <h1>The Workout Zone</h1>
+    <div class="d-flex justify-content-between align-items-center">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedback.html">Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button type="button" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                                Explore
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="classes.html">Classes</a></li>
+                                <li><a class="dropdown-item" href="library.html">Library</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-            </ul>
+                </div>
+            </div>
         </nav>
-    </header>
+        <div class="ms-3">
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="instagram-logo.png" alt="Instagram" style="height: 30px; width: auto;">
+            </a>
+        </div>
+    </div>
+</header>
+
     <main class="my-5">
         <div class="container">
             <h2>Welcome to Your Fitness Journey</h2>
@@ -372,7 +387,7 @@
 
             <div class="float-section">
                 <img src="best-gym-in-dhaka-city-2048x1367.jpg" alt="Best Gym" class="float-left img-fluid"> <p>This is some text that will wrap around the floated image. Floats are a CSS positioning property. When an element is floated, it is taken out of the normal flow of the document and shifted to the left or right until it touches the edge of its parent element or another floated element. Other content then flows around the floated element.</p>
-                <p>You can use floats to create layouts where text wraps around images, or to create simple multi-column layouts. However, for more complex layouts, Flexbox and CSS Grid are generally preferred as they offer more control and are less prone to layout issues like collapsing parent elements.</p>
+            
                 <div class="clearfix"></div>
             </div>
         </div>
