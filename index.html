@@ -18,11 +18,6 @@
             min-height: 100vh;
             color: #fff;
            body {
-    /* ... other styles ... */
-    background-image: url('Background%20Poster.webp');
-    background-size: cover; /* Changed from contain to cover */
-    background-repeat: no-repeat;
-    background-position: center center; /* Center the image */
 }
 
         body::before {
@@ -380,10 +375,20 @@
         </nav>
     </header>
     <main class="my-5">
-        <div class="container">
-            <h2>Welcome to Your Fitness Journey</h2>
-            <p id="main-text">Unlock your full potential with The Workout Zone. Explore premium equipment, expert guidance, and a supportive community dedicated to your success.</p>
-            <div class="buttons-container">
+    <div class="container">
+        <h2>Welcome to Your Fitness Journey</h2>
+        <p id="main-text">Unlock your full potential with The Workout Zone. Explore premium equipment, expert guidance, and a supportive community dedicated to your success.</p>
+        <div class="buttons-container">
+            <a href="sign up.html" class="signup-button"  id="signup">Sign Up Now</a>
+        </div>
+
+        <div class="float-section">
+            <img src="best-gym-in-dhaka-city-2048x1367.jpg" alt="Best Gym" class="float-left">
+            <p>This is some text that will wrap around the floated image. Floats are a CSS positioning property. When an element is floated, it is taken out of the normal flow of the document and shifted to the left or right until it touches the edge of its parent element or another floated element. Other content then flows around the floated element.</p>
+            <p>You can use floats to create layouts where text wraps around images, or to create simple multi-column layouts. However, for more complex layouts, Flexbox and CSS Grid are generally preferred as they offer more control and are less prone to layout issues like collapsing parent elements.</p>
+            <div class="clearfix"></div> </div>
+    </div>
+</main>
                 <a href="sign up.html" class="signup-button"  id="signup">Sign Up Now</a>
             </div>
         </div>
