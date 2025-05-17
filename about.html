@@ -1,123 +1,157 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-  body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  color: #f0f8ff; /* Light, elegant text color */
-  }
-  header {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 30px 0;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  h1 {
-  color: #fff;
-  font-size: 3em;
-  margin: 0;
-  letter-spacing: 1.5px;
-  text-shadow: 2px 2px 4px #000000;
-  }
-  nav {
-  text-align: center;
-  margin-top: 25px;
-  }
-  nav a {
-  color: #e0f2f7;
-  text-decoration: none;
-  margin: 0 15px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.4);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-weight: bold;
-  letter-spacing: 1px;
-  }
-  nav a:hover {
-  background-color: #26a69a; /* Teal hover color */
-  color: #fff;
-  }
-  main {
-  flex-grow: 1;
-  padding: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  }
-  .container {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(15px);
-  animation: fadeIn 1s ease-out forwards;
-  max-width: 800px;
-  width: 100%;
-  }
-  @keyframes fadeIn {
-  from {
-  opacity: 0;
-  transform: translateY(20px);
-  }
-  to {
-  opacity: 1;
-  transform: translateY(0);
-  }
-  }
-  p {
-  line-height: 1.8;
-  margin-bottom: 25px;
-  text-shadow: 1px 1px 2px #000000;
-  font-size: 1.1em;
-  color: #f5f5f5;
-  }
-  footer {
-  text-align: center;
-  padding: 30px 0;
-  color: #e0f2f7;
-  text-shadow: 1px 1px 2px #000000;
-  background-color: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-  }
-  footer p {
-  margin: 5px 0;
-  font-size: 0.9em;
-  letter-spacing: 0.5px;
-  }
-  </style>
- </head>
- <body>
-  <header>
-  <h1>About Us</h1>
-  <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  </nav>
-  </header>
-  <main>
-  <div class="container">
-  <p>Welcome to The Workout Zone, your premier online destination for all things fitness. We're passionate about empowering individuals to achieve their health and wellness goals through access to high-quality exercise equipment and comprehensive workout guidance. Our platform uniquely blends a curated selection of gym equipment with expert tutorials for both home and gym-based routines, all conveniently in one place.</p>
-  <p>Explore our extensive catalog of gym equipment, meticulously chosen to cater to diverse fitness levels and training preferences. Whether you're a beginner setting up your home gym or a seasoned athlete looking to enhance your training facility, you'll find the perfect tools to support your fitness journey. Browse our detailed displays and discover equipment that aligns with your specific needs and aspirations.</p>
-  <p>At The Workout Zone, we believe that knowledge is key to success. That's why we offer complimentary insights and personalized recommendations to optimize your daily workout routines. Our expert resources and guidance will help you make informed decisions about the equipment that best suits your preferred exercises and fitness objectives. Don't forget to explore our comprehensive library for in-depth information and inspiration to elevate your fitness experience.</p>
-  <p>Step into The Workout Zone and join a supportive community dedicated to helping you unlock your full potential. We're more than just a retailer; we're your partner in achieving a healthier, stronger you.</p>
-  </div>
-  </main>
-  <footer>
-  <p>&copy; 2025 @The Workout Zone</p>
-  <p>Your Ultimate Fitness Destination</p>
-  </footer>
- </body>
- </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            color: #f0f8ff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 3em;
+            margin: 0;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        nav a {
+            color: #e0f2f7;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            background-color: #26a69a;
+            color: #fff;
+        }
+
+        main {
+            flex-grow: 1;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(15px);
+            animation: fadeIn 1s ease-out forwards;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 2px #000000;
+            font-size: 1.1em;
+            color: #f5f5f5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #e0f2f7;
+            text-shadow: 1px 1px 2px #000000;
+            background-color: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
+
+        .float-section {
+            margin-top: 2rem;
+            overflow: hidden;
+        }
+
+        .float-image {
+            float: left;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 40%;
+            height: auto;
+        }
+
+        .float-text {
+            float: left;
+            width: 55%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="float-section">
+                <img src="what_does_a_fitness_coordinator_do-768x512.jpg" alt="Fitness Coordinator" class="float-image">
+                <p class = "float-text">Welcome to The Workout Zone, your premier online destination for all things fitness. We're passionate about empowering individuals to achieve their health and wellness goals through access to high-quality exercise equipment and comprehensive workout guidance. Our platform uniquely blends a curated selection of gym equipment with expert tutorials for both home and gym-based routines, all conveniently in one place.</p>
+            </div>
+            <p>Explore our extensive catalog of gym equipment, meticulously chosen to cater to diverse fitness levels and training preferences. Whether you're a beginner setting up your home gym or a seasoned athlete looking to enhance your training facility, you'll find the perfect tools to support your fitness journey. Browse our detailed displays and discover equipment that aligns with your specific needs and aspirations.</p>
+            <p>At The Workout Zone, we believe that knowledge is key to success. That's why we offer complimentary insights and personalized recommendations to optimize your daily workout routines. Our expert resources and guidance will help you make informed decisions about the equipment that best suits your preferred exercises and fitness objectives. Don't forget to explore our comprehensive library for in-depth information and inspiration to elevate your fitness experience.</p>
+            <p>Step into The Workout Zone and join a supportive community dedicated to helping you unlock your full potential. We're more than just a retailer; we're your partner in achieving a healthier, stronger you.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 @The Workout Zone</p>
+        <p>Your Ultimate Fitness Destination</p>
+    </footer>
+</body>
+</html>
