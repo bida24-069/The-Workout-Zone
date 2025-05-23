@@ -17,6 +17,12 @@
     min-height: 100vh;
     color: #fff;
     overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+    /* Added background image properties */
+    background-image: url('Background%20Image.jpg'); /* Example gym image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Makes the background fixed while content scrolls */
    }
 
   body::before {
@@ -26,10 +32,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #007bff, #00bcd4, #28a745, #ffc107);
+    background: linear-gradient(45deg, rgba(0, 123, 255, 0.5), rgba(0, 188, 212, 0.5), rgba(40, 167, 69, 0.5), rgba(255, 193, 7, 0.5)); /* Kept the gradient for a subtle effect */
     background-size: 400% 400%;
     animation: gradientAnimation 15s infinite alternate;
-    opacity: 0.7;
+    opacity: 0.7; /* Adjust opacity to control visibility of background image */
     z-index: -1;
    }
 
@@ -411,15 +417,14 @@
     }, 1000); // Wait for animation to complete before redirecting
    });
 
-   // Dynamic gradient animation direction
-   const bodyBefore = document.querySelector('body::before');
+   // Dynamic gradient animation direction - Adjusted for the new body background
    const gradientAnimation = document.createElement('style');
    const randomAngle = Math.floor(Math.random() * 360);
    gradientAnimation.innerHTML = `
     @keyframes gradientAnimation {
      0% {
       background-position: 0% 50%;
-      background: linear-gradient(${randomAngle}deg, #007bff, #00bcd4, #28a745, #ffc107);
+      background: linear-gradient(${randomAngle}deg, rgba(0, 123, 255, 0.5), rgba(0, 188, 212, 0.5), rgba(40, 167, 69, 0.5), rgba(255, 193, 7, 0.5));
       background-size: 400% 400%;
      }
      50% {
@@ -436,5 +441,13 @@
  </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
 
            
