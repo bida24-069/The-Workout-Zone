@@ -134,36 +134,37 @@
         }
 
         .float-image {
-            /* Removed float: left; as Flexbox handles layout */
-            flex-shrink: 0; /* Prevent image from shrinking */
-            margin-right: 0; /* Reset margin from old float layout */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 40%; /* Adjusted max-width to allow more space for text */
-            height: auto;
-        }
+            /* Responsive adjustments */
+@media (min-width: 769px) { /* Apply these styles on larger screens */
+ .float-section {
+  flex-direction: column; /* Stack image and text on larger screens too */
+  align-items: flex-start; /* Align text to the left */
+ }
 
-        .float-text-container { /* New class for the text div */
-            /* Removed float: left; and width: 50%; */
-            flex-grow: 1; /* Allows this div to take up remaining space */
-            text-align: left; /* Align text to the left within its container */
-        }
+ .float-image {
+  max-width: 100%; /* Image takes full width on larger screens */
+  margin-bottom: 20px;
+ }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .float-section {
-                flex-direction: column; /* Stack image and text vertically on smaller screens */
-                align-items: center; /* Center items when stacked */
-            }
+ .float-text-container {
+  text-align: left; /* Keep text aligned left */
+ }
+}
 
-            .float-image {
-                max-width: 80%; /* Make image larger on small screens when stacked */
-                margin-bottom: 20px; /* Add space below image when stacked */
-            }
-             .float-text-container {
-                text-align: center; /* Center text on small screens */
-            }
-        }
+@media (max-width: 768px) { /* Existing styles for smaller screens */
+ .float-section {
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .float-image {
+  max-width: 80%;
+  margin-bottom: 20px;
+ }
+ .float-text-container {
+  text-align: center;
+ }
+}
     </style>
 </head>
 <body>
