@@ -1,16 +1,14 @@
-     <!DOCTYPE html>
- <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Workout Zone</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-      p {
-  background-image: url('Background%20Image.jpg'); 
-      }
-  <body> {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>The Workout Zone</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+ <style>
+  body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -18,37 +16,38 @@
     flex-direction: column;
     min-height: 100vh;
     color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scroll due to animations */
    }
 
-   body::before {
+  body::before {
     content: '';
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(45deg, #007bff, #00bcd4, #28a745, #ffc107);
     background-size: 400% 400%;
     animation: gradientAnimation 15s infinite alternate;
     opacity: 0.7;
     z-index: -1;
    }
 
-   @keyframes gradientAnimation {
+  @keyframes gradientAnimation {
     0% {
-     background-position: 0% 50%;
+      background-position: 0% 50%;
     }
 
     50% {
-     background-position: 100% 50%;
+      background-position: 100% 50%;
     }
 
     100% {
-     background-position: 0% 50%;
+      background-position: 0% 50%;
     }
    }
 
-   header {
+  header {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 2rem 0;
     text-align: center;
@@ -59,7 +58,7 @@
     box-sizing: border-box;
    }
 
-   h1 {
+  h1 {
     color: #ffc107;
     font-size: 4em;
     margin: 0;
@@ -68,17 +67,17 @@
     animation: pulse 2s infinite alternate;
    }
 
-   @keyframes pulse {
+  @keyframes pulse {
     0% {
-     transform: scale(1);
+      transform: scale(1);
     }
 
     100% {
-     transform: scale(1.05);
+      transform: scale(1.05);
     }
    }
 
-   .navbar {
+  .navbar {
     padding: 1rem 0;
     background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
@@ -88,7 +87,7 @@
     box-sizing: border-box;
    }
 
-   .navbar-nav {
+  .navbar-nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,11 +96,11 @@
     padding: 0;
    }
 
-   .nav-item {
+  .nav-item {
     margin: 0 1rem;
    }
 
-   .nav-link {
+  .nav-link {
     color: #e0f7fa;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
@@ -114,14 +113,14 @@
     display: inline-block;
    }
 
-   .nav-link:hover {
+  .nav-link:hover {
     background-color: #00acc1;
     color: #fff;
     transform: translateY(-3px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
    }
 
-   .dropdown-toggle {
+  .dropdown-toggle {
     color: #e0f7fa;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
@@ -136,33 +135,33 @@
     border: none;
    }
 
-   .dropdown-toggle:hover {
+  .dropdown-toggle:hover {
     background-color: #00acc1;
     color: #fff;
     transform: translateY(-3px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
    }
 
-   .dropdown-menu {
+  .dropdown-menu {
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 0.25rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
    }
 
-   .dropdown-item {
+  .dropdown-item {
     color: #212529;
     text-decoration: none;
     padding: 0.5rem 1rem;
     display: block;
    }
 
-   .dropdown-item:hover, .dropdown-item:focus {
+  .dropdown-item:hover, .dropdown-item:focus {
     color: #fff;
     background-color: #00acc1;
    }
 
-   main {
+  main {
     flex-grow: 1;
     padding: 3rem;
     display: flex;
@@ -170,26 +169,16 @@
     align-items: center;
    }
 
-   .container {
+  .container {
     background: rgba(0, 0, 0, 0.6);
     padding: 3rem;
     border-radius: 1rem;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(20px);
     text-align: center;
-    animation: slideIn 1s ease-out forwards;
-    opacity: 0;
-    transform: translateY(30px);
    }
 
-   @keyframes slideIn {
-    to {
-     opacity: 1;
-     transform: translateY(0);
-    }
-   }
-
-   .container h2 {
+  .container h2 {
     color: #fff;
     font-size: 2.5em;
     margin-bottom: 2rem;
@@ -197,7 +186,7 @@
     transition: color 0.5s ease;
    }
 
-   .container p {
+  .container p {
     line-height: 2;
     margin-bottom: 2.5rem;
     text-shadow: 1px 1px 2px #000000;
@@ -205,7 +194,7 @@
     color: #f0f8ff;
    }
 
-   .btn {
+  .btn {
     display: inline-block;
     padding: 0.75rem 1.75rem;
     border-radius: 0.6rem;
@@ -217,31 +206,31 @@
     margin: 0 0.5rem;
    }
 
-   .btn-warning {
+  .btn-warning {
     background-color: #ffc107;
     color: #333;
     border: none;
    }
 
-   .btn-warning:hover {
+  .btn-warning:hover {
     background-color: #e0a800;
     transform: scale(1.05);
     box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.5);
    }
 
-   .btn-info {
+  .btn-info {
     background-color: #0dcaf0;
     color: #fff;
     border: none;
    }
 
-   .btn-info:hover {
+  .btn-info:hover {
     background-color: #0b8398;
     transform: scale(1.05);
     box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.5);
    }
 
-   footer {
+  footer {
     text-align: center;
     padding: 2rem 0;
     color: #e0f7fa;
@@ -254,13 +243,13 @@
     box-sizing: border-box;
    }
 
-   footer p {
+  footer p {
     margin: 0.5rem 0;
     font-size: 1em;
     letter-spacing: 0.8px;
    }
 
-   .float-section {
+  .float-section {
     margin-top: 2rem;
     padding: 1.5rem;
     background-color: rgba(0, 0, 0, 0.4);
@@ -268,7 +257,7 @@
     overflow: auto; /* Added to contain floated elements */
    }
 
-   .float-left {
+  .float-left {
     float: left;
     margin-right: 1.5rem;
     margin-bottom: 0.75rem;
@@ -278,150 +267,174 @@
     height: auto;
    }
 
-   .clearfix::after {
+  .clearfix::after {
     content: "";
     display: table;
     clear: both;
    }
 
-   #logo {
-    width: 150px; /* Adjust size as needed */
-    height: auto;
-    margin-bottom: 1rem;
-   }
-
-   @media (max-width: 768px) {
+  @media (max-width: 768px) {
     h1 {
-     font-size: 2.5em;
+      font-size: 2.5em;
     }
 
     main {
-     padding: 1.5rem;
+      padding: 1.5rem;
     }
 
     .container {
-     padding: 1.5rem;
+      padding: 1.5rem;
     }
 
     .navbar-nav {
-     flex-direction: column;
-     align-items: stretch;
+      flex-direction: column;
+      align-items: stretch;
     }
 
     .nav-item {
-     margin: 0.5rem 0;
+      margin: 0.5rem 0;
     }
 
     .nav-link, .dropdown-toggle {
-     display: block;
-     text-align: center;
-     margin: 0.25rem 0;
+      display: block;
+      text-align: center;
+      margin: 0.25rem 0;
     }
 
     .dropdown-menu {
-     position: static;
-     display: none;
-     width: 100%;
-     box-shadow: none;
-     border: none;
-     padding: 0;
-     margin-top: 0;
+      position: static;
+      display: none;
+      width: 100%;
+      box-shadow: none;
+      border: none;
+      padding: 0;
+      margin-top: 0;
     }
 
     .dropdown.show .dropdown-menu {
-     display: block;
+      display: block;
     }
 
     .dropdown-item {
-     text-align: center;
-     padding: 0.5rem 1rem;
+      text-align: center;
+      padding: 0.5rem 1rem;
     }
 
     .float-left {
-     float: none;
-     margin-right: 0;
-     margin-bottom: 1rem;
-     max-width: 100%;
+      float: none;
+      margin-right: 0;
+      margin-bottom: 1rem;
+      max-width: 100%;
     }
    }
-  </style>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
- </head>
- <body>
-  <header>
-   <img id="logo" src="workout-zone-logo.png" alt="Workout Zone Logo">
-   <h1>The Workout Zone</h1>
-   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-    <div class="container-fluid">
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-       </li>
-       <li class="nav-item">
-        <a class="nav-link" href="about.html">About</a>
-       </li>
-       <li class="nav-item">
-        <a class="nav-link" href="feedback.html">Feedback</a>
-       </li>
-       <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
-       </li>
-       <li class="nav-item dropdown">
-        <button type="button" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
-         Explore
-        </button>
-        <ul class="dropdown-menu">
-         <li><a class="dropdown-item" href="classes.html">Classes</a></li>
-         <li><a class="dropdown-item" href="library.html">Library</a></li>
-        </ul>
-       </li>
-      </ul>
-     </div>
-    </div>
-   </nav>
-  </header>
-  <main class="my-5">
-   <div class="container">
-    <h2>Welcome to Your Fitness Journey</h2>
-    <p id="main-text">Unlock your full potential with The Workout Zone. Explore premium equipment, expert guidance, and a supportive community dedicated to your success.</p>
-    <div class="mb-3"> <a href="sign up.html" id="signup" class="btn btn-info">Sign Up Now</a> </div>
-    <div class="float-section">
-     <img src="best-gym-in-dhaka-city-2048x1367.jpg" alt="Best Gym" class="float-left img-fluid">
-     <div class="clearfix"></div>
+ </style>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+ <header>
+  <h1>The Workout Zone</h1>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+   <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+     <ul class="navbar-nav">
+      <li class="nav-item">
+       <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="about.html">About</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="feedback.html">Feedback</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+      <li class="nav-item dropdown">
+       <button type="button" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+        Explore
+       </button>
+       <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="classes.html">Classes</a></li>
+        <li><a class="dropdown-item" href="library.html">Library</a></li>
+       </ul>
+      </li>
+     </ul>
     </div>
    </div>
-  </main>
-  <footer>
-   <p>&copy; <span id="year">2025</span> The Workout Zone</p>
-   <p>Elevate Your Fitness.</p>
-  </footer>
-  <script>
-   document.addEventListener('DOMContentLoaded', function() {
-    const currentLocation = window.location.href;
-    const navLinks = document.querySelectorAll('.nav-link');
+  </nav>
+ </header>
+ <main class="my-5">
+  <div class="container">
+   <h2>Welcome to Your Fitness Journey</h2>
+   <p id="main-text" class="animate__animated animate__fadeInUp">Unlock your full potential with The Workout Zone. Explore premium equipment, expert guidance, and a supportive community dedicated to your success.</p>
+   <div class="mb-3"> <a href="sign up.html" id="signup" class="btn btn-info animate__animated animate__zoomIn">Sign Up Now</a> </div>
+   <div class="float-section">
+    <img src="best-gym-in-dhaka-city-2048x1367.jpg" alt="Best Gym" class="float-left img-fluid">
+    <div class="clearfix"></div>
+   </div>
+  </div>
+ </main>
+ <footer>
+  <p>&copy; <span id="year"></span> The Workout Zone</p>
+  <p>Elevate Your Fitness.</p>
+ </footer>
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+   const currentLocation = window.location.href;
+   const navLinks = document.querySelectorAll('.nav-link');
 
-    navLinks.forEach(link => {
-     if (link.href === currentLocation) {
-      link.classList.add('active');
-     }
-    });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const signUpButton = document.getElementById('signup');
-    const mainText = document.getElementById('main-text');
-
-    signUpButton.addEventListener('click', function(event) {
-     mainText.textContent = "Ready to transform your body? Join us now and begin your journey to a healthier you!";
-    });
+   navLinks.forEach(link => {
+    if (link.href === currentLocation) {
+     link.classList.add('active');
+    }
    });
-  </script>
- </body>
- </html>
+
+   document.getElementById('year').textContent = new Date().getFullYear();
+
+   const signUpButton = document.getElementById('signup');
+   const mainText = document.getElementById('main-text');
+
+   signUpButton.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    mainText.textContent = "Ready to transform your body? Join us now and begin your journey to a healthier you!";
+    // Optional: Add a class to trigger a subtle animation on text change
+    mainText.classList.remove('animate__fadeInUp'); // Remove initial animation class
+    mainText.classList.add('animate__pulse'); // Add a new animation
+    setTimeout(() => {
+     mainText.classList.remove('animate__pulse');
+     // Redirect after animation if needed
+     window.location.href = "sign up.html";
+    }, 1000); // Wait for animation to complete before redirecting
+   });
+
+   // Dynamic gradient animation direction
+   const bodyBefore = document.querySelector('body::before');
+   const gradientAnimation = document.createElement('style');
+   const randomAngle = Math.floor(Math.random() * 360);
+   gradientAnimation.innerHTML = `
+    @keyframes gradientAnimation {
+     0% {
+      background-position: 0% 50%;
+      background: linear-gradient(${randomAngle}deg, #007bff, #00bcd4, #28a745, #ffc107);
+      background-size: 400% 400%;
+     }
+     50% {
+      background-position: 100% 50%;
+     }
+     100% {
+      background-position: 0% 50%;
+     }
+    }
+   `;
+   document.head.appendChild(gradientAnimation);
+
+  });
+ </script>
+</body>
+</html>
 
            
