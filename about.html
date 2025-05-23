@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,23 @@
             background-size: cover;
             background-position: center;
             color: #f0f8ff;
+            /* Added background image for consistency with index.html */
+            background-image: url('Background%20Image.jpg');
+            background-attachment: fixed;
         }
+
+        /* Added a semi-transparent overlay for readability, similar to index.html */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* A simple black overlay with 50% opacity */
+            z-index: -1;
+        }
+
 
         header {
             background-color: rgba(0, 0, 0, 0.6);
@@ -111,21 +127,42 @@
 
         .float-section {
             margin-top: 2rem;
-            overflow: hidden;
+            /* Removed overflow: hidden; as Flexbox handles containment */
+            display: flex; /* Enable Flexbox */
+            align-items: flex-start; /* Align items to the start of the cross-axis (top) */
+            gap: 20px; /* Add space between image and text */
         }
 
         .float-image {
-            float: left;
-            margin-right: 20px;
+            /* Removed float: left; as Flexbox handles layout */
+            flex-shrink: 0; /* Prevent image from shrinking */
+            margin-right: 0; /* Reset margin from old float layout */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 50%;
+            max-width: 40%; /* Adjusted max-width to allow more space for text */
             height: auto;
         }
 
-        .float-text {
-            float: left;
-            width: 50%;
+        .float-text-container { /* New class for the text div */
+            /* Removed float: left; and width: 50%; */
+            flex-grow: 1; /* Allows this div to take up remaining space */
+            text-align: left; /* Align text to the left within its container */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .float-section {
+                flex-direction: column; /* Stack image and text vertically on smaller screens */
+                align-items: center; /* Center items when stacked */
+            }
+
+            .float-image {
+                max-width: 80%; /* Make image larger on small screens when stacked */
+                margin-bottom: 20px; /* Add space below image when stacked */
+            }
+             .float-text-container {
+                text-align: center; /* Center text on small screens */
+            }
         }
     </style>
 </head>
@@ -142,7 +179,8 @@
         <div class="container">
             <div class="float-section">
                 <img src="what_does_a_fitness_coordinator_do-768x512.jpg" alt="Fitness Coordinator" class="float-image">
-                <p class = "float-text">We're passionate about empowering individuals to achieve their health and wellness goals through access to high-quality exercise equipment and comprehensive workout guidance. Our platform uniquely blends a curated selection of gym equipment with expert tutorials for both home and gym-based routines, all conveniently in one place.</p>
+                <div class="float-text-container"> <p>We're passionate about empowering individuals to achieve their health and wellness goals through access to high-quality exercise equipment and comprehensive workout guidance. Our platform uniquely blends a curated selection of gym equipment with expert tutorials for both home and gym-based routines, all conveniently in one place.</p>
+                </div>
             </div>
             <p>Explore our extensive catalog of gym equipment, meticulously chosen to cater to diverse fitness levels and training preferences. Whether you're a beginner setting up your home gym or a seasoned athlete looking to enhance your training facility, you'll find the perfect tools to support your fitness journey. Browse our detailed displays and discover equipment that aligns with your specific needs and aspirations.</p>
             <p>At The Workout Zone, we believe that knowledge is key to success. That's why we offer complimentary insights and personalized recommendations to optimize your daily workout routines. Our expert resources and guidance will help you make informed decisions about the equipment that best suits your preferred exercises and fitness objectives. Don't forget to explore our comprehensive library for in-depth information and inspiration to elevate your fitness experience.</p>
