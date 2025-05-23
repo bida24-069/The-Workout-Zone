@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -86,7 +86,7 @@
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
             backdrop-filter: blur(15px);
             animation: fadeIn 1s ease-out forwards;
-            max-width: 800px;
+            max-width: 950px; /* Increased max-width for more horizontal space */
             width: 100%;
         }
 
@@ -127,44 +127,54 @@
 
         .float-section {
             margin-top: 2rem;
-            /* Removed overflow: hidden; as Flexbox handles containment */
             display: flex; /* Enable Flexbox */
-            align-items: flex-start; /* Align items to the start of the cross-axis (top) */
             gap: 20px; /* Add space between image and text */
         }
 
         .float-image {
-            /* Responsive adjustments */
-@media (min-width: 769px) { /* Apply these styles on larger screens */
- .float-section {
-  flex-direction: column; /* Stack image and text on larger screens too */
-  align-items: flex-start; /* Align text to the left */
- }
+            flex-shrink: 0; /* Prevent image from shrinking */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            height: auto;
+        }
 
- .float-image {
-  max-width: 100%; /* Image takes full width on larger screens */
-  margin-bottom: 20px;
- }
+        .float-text-container {
+            flex-grow: 1; /* Allows this div to take up remaining space */
+            text-align: left; /* Align text to the left within its container */
+        }
 
- .float-text-container {
-  text-align: left; /* Keep text aligned left */
- }
-}
+        /* Responsive adjustments for screens LARGER than 768px */
+        @media (min-width: 769px) {
+            .float-section {
+                flex-direction: column; /* Stack image and text vertically */
+                align-items: center; /* Center them when stacked */
+            }
 
-@media (max-width: 768px) { /* Existing styles for smaller screens */
- .float-section {
-  flex-direction: column;
-  align-items: center;
- }
+            .float-image {
+                max-width: 100%; /* Image takes full width of .float-section */
+                margin-bottom: 20px; /* Space between image and text */
+            }
 
- .float-image {
-  max-width: 80%;
-  margin-bottom: 20px;
- }
- .float-text-container {
-  text-align: center;
- }
-}
+            .float-text-container {
+                text-align: center; /* Center text when stacked on larger screens */
+            }
+        }
+
+        /* Responsive adjustments for screens 768px and SMALLER */
+        @media (max-width: 768px) {
+            .float-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .float-image {
+                max-width: 80%;
+                margin-bottom: 20px;
+            }
+            .float-text-container {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -180,7 +190,8 @@
         <div class="container">
             <div class="float-section">
                 <img src="what_does_a_fitness_coordinator_do-768x512.jpg" alt="Fitness Coordinator" class="float-image">
-                <div class="float-text-container"> <p>We're passionate about empowering individuals to achieve their health and wellness goals through access to high-quality exercise equipment and comprehensive workout guidance. Our platform uniquely blends a curated selection of gym equipment with expert tutorials for both home and gym-based routines, all conveniently in one place.</p>
+                <div class="float-text-container">
+                    <p>We're passionate about empowering individuals to achieve their health and wellness goals through access to high-quality exercise equipment and comprehensive workout guidance. Our platform uniquely blends a curated selection of gym equipment with expert tutorials for both home and gym-based routines, all conveniently in one place.</p>
                 </div>
             </div>
             <p>Explore our extensive catalog of gym equipment, meticulously chosen to cater to diverse fitness levels and training preferences. Whether you're a beginner setting up your home gym or a seasoned athlete looking to enhance your training facility, you'll find the perfect tools to support your fitness journey. Browse our detailed displays and discover equipment that aligns with your specific needs and aspirations.</p>
